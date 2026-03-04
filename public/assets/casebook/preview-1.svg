@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <radialGradient id="bg1p" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#b8906a"/>
+      <stop offset="100%" stop-color="#7a5c38"/>
+    </radialGradient>
+    <radialGradient id="fill1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#b08050"/>
+      <stop offset="60%" stop-color="#9e7040"/>
+      <stop offset="100%" stop-color="#8a6030"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg1p)"/>
+  <!-- Same background brushstrokes as before-1 -->
+  <ellipse cx="80" cy="80" rx="90" ry="70" fill="#9e7050" opacity="0.5"/>
+  <ellipse cx="320" cy="220" rx="100" ry="80" fill="#6a4828" opacity="0.4"/>
+  <ellipse cx="200" cy="150" rx="120" ry="90" fill="#c09060" opacity="0.3"/>
+  <ellipse cx="340" cy="70" rx="70" ry="60" fill="#a07848" opacity="0.4"/>
+  <ellipse cx="60" cy="240" rx="80" ry="60" fill="#7a5c38" opacity="0.4"/>
+  <path d="M40 60 Q80 40 120 60 Q110 80 70 75 Z" fill="#b07848" opacity="0.5"/>
+  <path d="M280 40 Q330 30 370 50 Q360 70 310 68 Z" fill="#9a6840" opacity="0.4"/>
+  <path d="M30 180 Q70 160 110 178 Q100 200 55 195 Z" fill="#6a4828" opacity="0.5"/>
+  <!-- FILLED damage region – brushstroke-aware inpainting -->
+  <ellipse cx="200" cy="148" rx="52" ry="44" fill="url(#fill1)"/>
+  <!-- Brushstroke details matching surrounding area -->
+  <path d="M158 138 Q170 125 186 132 Q200 138 195 152 Q180 158 165 150 Z" fill="#a07040" opacity="0.6"/>
+  <path d="M210 140 Q228 130 244 140 Q242 158 226 162 Q210 158 210 148 Z" fill="#9a6838" opacity="0.5"/>
+  <path d="M178 156 Q196 148 216 154 Q218 166 200 170 Q182 166 178 156 Z" fill="#8a5c30" opacity="0.5"/>
+  <path d="M184 128 Q200 118 218 126 Q220 138 200 140 Q182 140 184 128 Z" fill="#b08048" opacity="0.4"/>
+  <!-- Subtle brushstroke texture in filled area -->
+  <line x1="162" y1="142" x2="180" y2="138" stroke="#9e6838" stroke-width="1.5" opacity="0.3"/>
+  <line x1="220" y1="142" x2="238" y2="146" stroke="#9e6838" stroke-width="1.5" opacity="0.3"/>
+  <line x1="186" y1="164" x2="214" y2="166" stroke="#7a5030" stroke-width="1.5" opacity="0.3"/>
+  <!-- Preview label -->
+  <rect x="12" y="268" width="80" height="22" rx="4" fill="rgba(139,69,19,0.75)"/>
+  <text x="52" y="283" text-anchor="middle" fill="white" font-size="11" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">Preview</text>
+  <rect x="296" y="268" width="92" height="22" rx="4" fill="rgba(139,69,19,0.55)"/>
+  <text x="342" y="283" text-anchor="middle" fill="white" font-size="9" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">RESTORED PREVIEW</text>
+</svg>

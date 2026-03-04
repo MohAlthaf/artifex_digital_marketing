@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450">
+  <defs>
+    <filter id="g"><feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feBlend in="SourceGraphic" mode="multiply"/></filter>
+  </defs>
+  <rect width="600" height="450" fill="#d4b896"/>
+  <rect width="600" height="450" opacity="0.15" filter="url(#g)"/>
+  <ellipse cx="300" cy="200" rx="120" ry="150" fill="#c8a878" stroke="#a08060" stroke-width="1"/>
+  <text x="300" y="430" font-family="system-ui, sans-serif" font-size="11" fill="#6a5338" text-anchor="middle" opacity="0.6">ARTIFEX restoration preview — edges restored</text>
+</svg>

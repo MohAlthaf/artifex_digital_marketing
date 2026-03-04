@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450">
+  <rect width="600" height="450" fill="#1a1614"/>
+  <!-- Crack mask regions -->
+  <g stroke="#ffffff" stroke-width="4" opacity="0.9" fill="none">
+    <path d="M150,80 L180,120 L160,180 L190,220 L170,280"/>
+    <path d="M180,120 L250,140 L280,110"/>
+    <path d="M190,220 L250,200 L300,240"/>
+    <path d="M320,60 L340,120 L310,180 L350,240 L330,300"/>
+    <path d="M340,120 L400,100 L420,140"/>
+    <path d="M450,90 L460,160 L440,220 L470,280"/>
+  </g>
+  <text x="300" y="430" font-family="system-ui, sans-serif" font-size="11" fill="#5c5c5c" text-anchor="middle">Binary mask — crack network</text>
+</svg>

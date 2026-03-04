@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <linearGradient id="sky2p" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a7a9e"/>
+      <stop offset="100%" stop-color="#8097b8"/>
+    </linearGradient>
+    <linearGradient id="ground2p" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7a9058"/>
+      <stop offset="100%" stop-color="#5a7040"/>
+    </linearGradient>
+  </defs>
+  <!-- Same landscape as before-2 but NO cracks -->
+  <rect width="400" height="300" fill="url(#sky2p)"/>
+  <rect y="175" width="400" height="125" fill="url(#ground2p)"/>
+  <ellipse cx="120" cy="75" rx="55" ry="28" fill="#c8d5e8" opacity="0.7"/>
+  <ellipse cx="300" cy="55" rx="65" ry="30" fill="#ccd8ea" opacity="0.6"/>
+  <ellipse cx="200" cy="95" rx="40" ry="20" fill="#b8c8dc" opacity="0.5"/>
+  <ellipse cx="60" cy="178" rx="35" ry="25" fill="#527038"/>
+  <ellipse cx="340" cy="178" rx="40" ry="28" fill="#4a6830"/>
+  <ellipse cx="200" cy="176" rx="30" ry="22" fill="#5a7840"/>
+  <rect y="255" width="400" height="45" fill="#7090b0" opacity="0.3"/>
+  <!-- Subtle colour-fill grading that would represent filled cracks – very subtle warm lines -->
+  <g opacity="0.08" stroke="#80a0c0" stroke-width="0.6" fill="none">
+    <path d="M50 40 L70 68 L55 100 L80 128 L65 160 M130 30 L148 55 L138 85 M210 20 L228 48 L215 80 M290 30 L308 55 M355 45 L368 72"/>
+  </g>
+  <!-- Label -->
+  <rect x="12" y="268" width="80" height="22" rx="4" fill="rgba(139,69,19,0.75)"/>
+  <text x="52" y="283" text-anchor="middle" fill="white" font-size="11" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">Preview</text>
+  <rect x="296" y="268" width="92" height="22" rx="4" fill="rgba(139,69,19,0.55)"/>
+  <text x="342" y="283" text-anchor="middle" fill="white" font-size="9" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">RESTORED PREVIEW</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- Black background for mask -->
+  <rect width="400" height="300" fill="#0a0806"/>
+  <!-- Network crack pattern in white – showing the cracking damage regions -->
+  <g fill="none" stroke="white" stroke-width="1.5" opacity="0.85">
+    <path d="M50 40 L70 68 L55 100 L80 128 L65 160 L90 190"/>
+    <path d="M78 68 L95 88 L85 115 L100 145 L88 172"/>
+    <path d="M130 30 L148 55 L138 85 L160 110 L145 140 L162 168 L150 200"/>
+    <path d="M158 55 L172 78 L162 108 L178 132"/>
+    <path d="M210 20 L228 48 L215 80 L235 105 L220 135 L240 158 L228 190"/>
+    <path d="M235 48 L250 70 L238 100"/>
+    <path d="M290 30 L308 55 L295 88 L315 112 L300 145 L318 168"/>
+    <path d="M308 55 L322 76 L312 105 L328 130"/>
+    <path d="M355 45 L368 72 L355 100 L370 128"/>
+    <path d="M70 68 L90 72 M148 55 L165 60 M228 48 L246 52 M308 55 L325 58"/>
+    <path d="M55 100 L75 105 L92 108 M138 85 L158 90 L172 93 M215 80 L242 84 M295 88 L315 92"/>
+    <path d="M65 160 L84 165 L98 170 M145 140 L165 145 M220 135 L238 140 L254 142 M300 145 L318 148"/>
+  </g>
+  <!-- Crack intersections as bright spots -->
+  <circle cx="70" cy="68" r="2" fill="white" opacity="0.6"/>
+  <circle cx="55" cy="100" r="2" fill="white" opacity="0.6"/>
+  <circle cx="80" cy="128" r="2" fill="white" opacity="0.6"/>
+  <circle cx="148" cy="55" r="2" fill="white" opacity="0.6"/>
+  <circle cx="138" cy="85" r="2" fill="white" opacity="0.6"/>
+  <circle cx="228" cy="48" r="2" fill="white" opacity="0.6"/>
+  <circle cx="308" cy="55" r="2" fill="white" opacity="0.6"/>
+  <!-- Label -->
+  <rect x="12" y="268" width="66" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="45" y="283" text-anchor="middle" fill="white" font-size="11" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">Mask</text>
+  <rect x="306" y="268" width="82" height="22" rx="4" fill="rgba(255,255,255,0.12)"/>
+  <text x="347" y="283" text-anchor="middle" fill="white" font-size="9.5" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">CRACKING</text>
+</svg>

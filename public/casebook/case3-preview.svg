@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#ede9fe"/>
+  <text x="200" y="140" font-family="Arial" font-size="16" fill="#7c3aed" text-anchor="middle">Preview</text>
+  <text x="200" y="170" font-family="Arial" font-size="12" fill="#a78bfa" text-anchor="middle">Restored region</text>
+  <rect x="100" y="80" width="200" height="4" rx="2" fill="#a78bfa"/>
+  <rect x="140" y="200" width="120" height="4" rx="2" fill="#a78bfa"/>
+  <circle cx="200" cy="150" r="40" fill="none" stroke="#7c3aed" stroke-width="2"/>
+</svg>

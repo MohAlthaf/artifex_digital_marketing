@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 396" fill="none">
+  <!-- Background -->
+  <rect width="480" height="396" fill="#faf7f4"/>
+  <!-- Wall texture (subtle warm gradient) -->
+  <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#f4efe8"/>
+    <stop offset="100%" stop-color="#faf7f4"/>
+  </linearGradient>
+  <rect width="480" height="396" fill="url(#wall)"/>
+
+  <!-- Wainscoting line -->
+  <rect x="0" y="340" width="480" height="56" fill="#eee6da"/>
+  <line x1="0" y1="340" x2="480" y2="340" stroke="#ddd5ca" stroke-width="1.5"/>
+
+  <!-- Gallery header text -->
+  <text x="240" y="32" text-anchor="middle" fill="#857568" font-size="10" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif" letter-spacing="3">CASEBOOK EXAMPLES</text>
+  <line x1="80" y1="40" x2="180" y2="40" stroke="#ddd5ca" stroke-width="1"/>
+  <line x1="300" y1="40" x2="400" y2="40" stroke="#ddd5ca" stroke-width="1"/>
+
+  <!-- ── Painting 1: Central paint loss (oil) ── -->
+  <!-- Outer frame shadow -->
+  <rect x="26" y="56" width="128" height="166" rx="4" fill="#1c1814" opacity="0.06"/>
+  <!-- Frame border -->
+  <rect x="22" y="52" width="128" height="166" rx="4" fill="#9e8060" stroke="#7a5c38" stroke-width="2"/>
+  <!-- Inner frame bevel -->
+  <rect x="28" y="58" width="116" height="154" rx="2" fill="#7a5c38" opacity="0.4"/>
+  <!-- Canvas -->
+  <rect x="32" y="62" width="108" height="146" rx="1" fill="#c8b080"/>
+  <!-- Painting content: warm still life/floral with central loss -->
+  <ellipse cx="86" cy="135" rx="40" ry="48" fill="#9e7a50"/>
+  <ellipse cx="66" cy="150" rx="24" ry="30" fill="#7a5c38" opacity="0.8"/>
+  <ellipse cx="106" cy="125" rx="22" ry="32" fill="#b08050" opacity="0.7"/>
+  <ellipse cx="86" cy="90" rx="18" ry="22" fill="#a06830" opacity="0.8"/>
+  <!-- Central damage void -->
+  <ellipse cx="86" cy="130" rx="18" ry="16" fill="#e0d5c5"/>
+  <ellipse cx="86" cy="130" rx="12" ry="10" fill="#d5c8b2"/>
+  <!-- Frame label below -->
+  <rect x="36" y="194" width="52" height="10" rx="2" fill="rgba(28,24,20,0.45)"/>
+  <text x="62" y="202" text-anchor="middle" fill="white" font-size="7.5" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">PAINT LOSS</text>
+  <!-- Case label -->
+  <text x="86" y="232" text-anchor="middle" fill="#4a4038" font-size="10.5" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">Case 1</text>
+  <text x="86" y="248" text-anchor="middle" fill="#857568" font-size="9.5" font-family="ui-sans-serif,system-ui,sans-serif">Central paint loss</text>
+
+  <!-- ── Painting 2: Network cracking (landscape) ── -->
+  <!-- Outer frame shadow -->
+  <rect x="182" y="56" width="128" height="166" rx="4" fill="#1c1814" opacity="0.06"/>
+  <rect x="178" y="52" width="128" height="166" rx="4" fill="#5a5040" stroke="#3a3028" stroke-width="2"/>
+  <rect x="184" y="58" width="116" height="154" rx="2" fill="#3a3028" opacity="0.4"/>
+  <rect x="188" y="62" width="108" height="146" rx="1" fill="#a8b8c0"/>
+  <!-- Landscape: sky + ground -->
+  <rect x="188" y="62" width="108" height="80" fill="#8097b8"/>
+  <ellipse cx="242" cy="90" rx="20" ry="15" fill="#c8d4e0" opacity="0.9"/>
+  <rect x="188" y="142" width="108" height="66" fill="#6a8050"/>
+  <ellipse cx="220" cy="148" rx="28" ry="20" fill="#587040" opacity="0.8"/>
+  <!-- Crack network overlay -->
+  <path d="M200 75 L215 95 L205 120 L220 145 L210 170 M225 68 L240 85 L230 110 L250 130 L240 160 M255 72 L265 90 L258 115 L270 140 M215 95 L235 98 M230 110 L248 112" stroke="#4a3828" stroke-width="0.75" opacity="0.45"/>
+  <rect x="192" y="194" width="52" height="10" rx="2" fill="rgba(28,24,20,0.45)"/>
+  <text x="218" y="202" text-anchor="middle" fill="white" font-size="7.5" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">CRACKING</text>
+  <text x="242" y="232" text-anchor="middle" fill="#4a4038" font-size="10.5" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">Case 2</text>
+  <text x="242" y="248" text-anchor="middle" fill="#857568" font-size="9.5" font-family="ui-sans-serif,system-ui,sans-serif">Network cracking</text>
+
+  <!-- ── Painting 3: Edge flaking (portrait) ── -->
+  <rect x="338" y="56" width="128" height="166" rx="4" fill="#1c1814" opacity="0.06"/>
+  <rect x="334" y="52" width="128" height="166" rx="4" fill="#705848" stroke="#503828" stroke-width="2"/>
+  <rect x="340" y="58" width="116" height="154" rx="2" fill="#503828" opacity="0.4"/>
+  <rect x="344" y="62" width="108" height="146" rx="1" fill="#c0a888"/>
+  <!-- Portrait: abstract face/figure -->
+  <ellipse cx="398" cy="95" rx="22" ry="25" fill="#a88060" opacity="0.9"/>
+  <ellipse cx="398" cy="130" rx="32" ry="38" fill="#8a6040" opacity="0.7"/>
+  <ellipse cx="398" cy="165" rx="20" ry="16" fill="#7a5030" opacity="0.6"/>
+  <!-- Edge flaking / damage at edges -->
+  <rect x="344" y="62" width="12" height="146" fill="#1c1814" opacity="0.22" rx="1"/>
+  <rect x="440" y="62" width="12" height="146" fill="#1c1814" opacity="0.22" rx="1"/>
+  <rect x="344" y="62" width="108" height="12" fill="#1c1814" opacity="0.15" rx="1"/>
+  <!-- Irregular edge damage -->
+  <path d="M344 62 L350 65 L344 70 L352 74 L344 80 L348 85 L344 90" stroke="#e0d5c5" stroke-width="1.5" fill="none"/>
+  <path d="M452 62 L446 66 L452 71 L447 76 L452 82 L448 88 L452 94" stroke="#e0d5c5" stroke-width="1.5" fill="none"/>
+  <rect x="348" y="194" width="42" height="10" rx="2" fill="rgba(28,24,20,0.45)"/>
+  <text x="369" y="202" text-anchor="middle" fill="white" font-size="7.5" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">FLAKING</text>
+  <text x="398" y="232" text-anchor="middle" fill="#4a4038" font-size="10.5" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">Case 3</text>
+  <text x="398" y="248" text-anchor="middle" fill="#857568" font-size="9.5" font-family="ui-sans-serif,system-ui,sans-serif">Edge flaking</text>
+
+  <!-- Bottom divider + label -->
+  <text x="240" y="278" text-anchor="middle" fill="#857568" font-size="10" font-family="ui-sans-serif,system-ui,sans-serif">Before / Mask / Preview — three views per case</text>
+  <rect x="100" y="290" width="280" height="1" rx="1" fill="#e8e1d8"/>
+
+  <!-- Trust note -->
+  <rect x="80" y="302" width="320" height="24" rx="6" fill="#f5ebe0" stroke="#ddd5ca" stroke-width="1"/>
+  <text x="240" y="318" text-anchor="middle" fill="#8b4513" font-size="10" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">AI-generated previews for planning and documentation only</text>
+
+  <!-- Floor line text -->
+  <text x="240" y="368" text-anchor="middle" fill="#a89880" font-size="9.5" font-family="ui-sans-serif,system-ui,sans-serif" letter-spacing="2">ARTIFEX CASEBOOK</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <linearGradient id="portrait-bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8a880"/>
+      <stop offset="100%" stop-color="#a08058"/>
+    </linearGradient>
+  </defs>
+  <!-- Full painting, no edge damage – restored preview -->
+  <rect width="400" height="300" fill="url(#portrait-bg3)"/>
+  <rect x="0" y="0" width="150" height="300" fill="#7a5c38" opacity="0.35"/>
+  <rect x="250" y="0" width="150" height="300" fill="#7a5c38" opacity="0.3"/>
+  <!-- Face -->
+  <ellipse cx="200" cy="115" rx="58" ry="68" fill="#d4a878"/>
+  <ellipse cx="200" cy="225" rx="70" ry="80" fill="#c0906a"/>
+  <ellipse cx="225" cy="110" rx="32" ry="38" fill="#b88858" opacity="0.45"/>
+  <ellipse cx="182" cy="100" rx="8" ry="5" fill="#7a5c38" opacity="0.6"/>
+  <ellipse cx="218" cy="100" rx="8" ry="5" fill="#7a5c38" opacity="0.6"/>
+  <path d="M194 122 Q200 128 206 122" stroke="#9a7050" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <ellipse cx="200" cy="68" rx="60" ry="32" fill="#5a3820" opacity="0.8"/>
+  <!-- Restored left edge (no flaking) – filled with brushwork matching drapery -->
+  <rect x="0" y="0" width="30" height="300" fill="#7a5c38" opacity="0.35"/>
+  <!-- Restored right edge -->
+  <rect x="370" y="0" width="30" height="300" fill="#7a5c38" opacity="0.35"/>
+  <!-- Subtle brushstroke detail in restored areas showing continuity -->
+  <path d="M0 60 Q12 55 22 62 Q16 78 4 74 Z" fill="#8a6848" opacity="0.3"/>
+  <path d="M0 120 Q14 114 24 120 Q18 136 6 132 Z" fill="#8a6848" opacity="0.25"/>
+  <path d="M376 80 Q388 74 398 82 Q394 96 382 92 Z" fill="#8a6848" opacity="0.3"/>
+  <!-- Label -->
+  <rect x="12" y="268" width="80" height="22" rx="4" fill="rgba(139,69,19,0.75)"/>
+  <text x="52" y="283" text-anchor="middle" fill="white" font-size="11" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">Preview</text>
+  <rect x="296" y="268" width="92" height="22" rx="4" fill="rgba(139,69,19,0.55)"/>
+  <text x="342" y="283" text-anchor="middle" fill="white" font-size="9" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">RESTORED PREVIEW</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400">
+  <defs>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d4c4b0"/>
+      <stop offset="100%" stop-color="#c8b8a4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="400" fill="url(#warm)"/>
+  <rect width="1200" height="400" fill="#c8b8a4" opacity="0.2" filter="url(#grain)"/>
+  <text x="600" y="195" font-family="Georgia, serif" font-size="18" fill="#8b5e3c" text-anchor="middle" opacity="0.6">About ARTIFEX</text>
+  <text x="600" y="225" font-family="Georgia, serif" font-size="13" fill="#8b5e3c" text-anchor="middle" opacity="0.4">Brushstroke-aware restoration previews</text>
+</svg>

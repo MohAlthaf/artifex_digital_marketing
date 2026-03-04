@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a7a9e"/>
+      <stop offset="100%" stop-color="#8097b8"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7a9058"/>
+      <stop offset="100%" stop-color="#5a7040"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="400" height="300" fill="url(#sky)"/>
+  <!-- Horizon -->
+  <rect y="175" width="400" height="125" fill="url(#ground)"/>
+  <!-- Clouds -->
+  <ellipse cx="120" cy="75" rx="55" ry="28" fill="#c8d5e8" opacity="0.7"/>
+  <ellipse cx="300" cy="55" rx="65" ry="30" fill="#ccd8ea" opacity="0.6"/>
+  <ellipse cx="200" cy="95" rx="40" ry="20" fill="#b8c8dc" opacity="0.5"/>
+  <!-- Trees / foliage on horizon -->
+  <ellipse cx="60" cy="178" rx="35" ry="25" fill="#527038"/>
+  <ellipse cx="340" cy="178" rx="40" ry="28" fill="#4a6830"/>
+  <ellipse cx="200" cy="176" rx="30" ry="22" fill="#5a7840"/>
+  <!-- Water reflection in foreground -->
+  <rect y="255" width="400" height="45" fill="#7090b0" opacity="0.3"/>
+  <!-- Crack network overlay – fine craquelure pattern -->
+  <g opacity="0.55" stroke="#2e2820" stroke-width="0.9" fill="none">
+    <path d="M50 40 L70 68 L55 100 L80 128 L65 160 L90 190 M78 68 L95 88 L85 115 L100 145 L88 172"/>
+    <path d="M130 30 L148 55 L138 85 L160 110 L145 140 L162 168 L150 200 M158 55 L172 78 L162 108 L178 132"/>
+    <path d="M210 20 L228 48 L215 80 L235 105 L220 135 L240 158 L228 190 M235 48 L250 70 L238 100"/>
+    <path d="M290 30 L308 55 L295 88 L315 112 L300 145 L318 168 M308 55 L322 76 L312 105 L328 130"/>
+    <path d="M355 45 L368 72 L355 100 L370 128 M70 68 L90 72 M148 55 L165 60 M228 48 L246 52 M308 55 L325 58"/>
+    <path d="M55 100 L75 105 L92 108 M138 85 L158 90 L172 93 M215 80 L242 84 M295 88 L315 92"/>
+    <path d="M65 160 L84 165 L98 170 M145 140 L165 145 M220 135 L238 140 L254 142 M300 145 L318 148"/>
+  </g>
+  <!-- Label -->
+  <rect x="12" y="268" width="70" height="22" rx="4" fill="rgba(28,24,20,0.6)"/>
+  <text x="47" y="283" text-anchor="middle" fill="white" font-size="11" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">Before</text>
+  <rect x="306" y="268" width="82" height="22" rx="4" fill="rgba(28,24,20,0.45)"/>
+  <text x="347" y="283" text-anchor="middle" fill="white" font-size="9.5" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">CRACKING</text>
+</svg>

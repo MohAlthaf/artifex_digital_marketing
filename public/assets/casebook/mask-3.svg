@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#0a0806"/>
+  <!-- White damage regions at edges -->
+  <!-- Left edge flaking mask -->
+  <path d="M0 0 L28 0 L22 18 L30 32 L18 48 L26 64 L14 80 L24 96 L10 112 L22 128 L8 144 L20 160 L6 176 L18 192 L4 208 L16 224 L0 240 Z" fill="white" opacity="0.9"/>
+  <!-- Right edge flaking mask -->
+  <path d="M400 0 L368 0 L374 20 L364 36 L376 52 L362 68 L374 84 L360 100 L372 116 L358 132 L370 148 L356 164 L368 180 L354 196 L366 212 L352 228 L400 240 Z" fill="white" opacity="0.9"/>
+  <!-- Top edge mask -->
+  <path d="M60 0 L80 12 L100 4 L120 14 L140 6 L160 16 L180 8 L200 14 L220 6 L240 14 L260 4 L280 12 L300 2 L320 10 L340 0 Z" fill="white" opacity="0.85"/>
+  <!-- Additional chip masks -->
+  <path d="M25 90 L48 88 L44 108 L20 105 Z" fill="white" opacity="0.8"/>
+  <path d="M352 70 L376 72 L374 92 L350 88 Z" fill="white" opacity="0.8"/>
+  <!-- Label -->
+  <rect x="12" y="268" width="66" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="45" y="283" text-anchor="middle" fill="white" font-size="11" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">Mask</text>
+  <rect x="310" y="268" width="78" height="22" rx="4" fill="rgba(255,255,255,0.12)"/>
+  <text x="349" y="283" text-anchor="middle" fill="white" font-size="9.5" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">FLAKING</text>
+</svg>

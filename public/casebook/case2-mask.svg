@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1c1917"/>
+  <text x="200" y="140" font-family="Arial" font-size="16" fill="#fafaf9" text-anchor="middle">Mask</text>
+  <text x="200" y="170" font-family="Arial" font-size="12" fill="#a8a29e" text-anchor="middle">Damage region</text>
+  <circle cx="200" cy="150" r="40" fill="#ffffff"/>
+</svg>

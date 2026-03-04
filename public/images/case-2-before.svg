@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450">
+  <defs>
+    <filter id="g"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feBlend in="SourceGraphic" mode="multiply"/></filter>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8ba4b8"/><stop offset="60%" stop-color="#a0b8c8"/><stop offset="100%" stop-color="#7a9060"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#sky)"/>
+  <rect width="600" height="450" opacity="0.12" filter="url(#g)"/>
+  <!-- Crack network -->
+  <g stroke="#3a3028" stroke-width="1" opacity="0.5" fill="none">
+    <path d="M150,80 L180,120 L160,180 L190,220 L170,280"/>
+    <path d="M180,120 L250,140 L280,110"/>
+    <path d="M190,220 L250,200 L300,240"/>
+    <path d="M320,60 L340,120 L310,180 L350,240 L330,300"/>
+    <path d="M340,120 L400,100 L420,140"/>
+    <path d="M450,90 L460,160 L440,220 L470,280"/>
+  </g>
+  <text x="300" y="430" font-family="system-ui, sans-serif" font-size="11" fill="#3a3028" text-anchor="middle" opacity="0.6">Landscape — network cracking in sky region</text>
+</svg>

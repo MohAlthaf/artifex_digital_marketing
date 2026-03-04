@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 396" fill="none">
+  <!-- warm bg -->
+  <rect width="480" height="396" fill="#faf7f4"/>
+  <!-- subtle warm radial glow -->
+  <radialGradient id="glow" cx="50%" cy="50%" r="55%">
+    <stop offset="0%" stop-color="#f0e0d0" stop-opacity="0.6"/>
+    <stop offset="100%" stop-color="#faf7f4" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="480" height="396" fill="url(#glow)"/>
+
+  <!-- ── Left column: 5 steps ── -->
+  <!-- Step 1 – Upload -->
+  <circle cx="52" cy="58" r="20" fill="#8b4513"/>
+  <text x="52" y="63" text-anchor="middle" fill="white" font-size="13" font-weight="700" font-family="ui-sans-serif,system-ui,sans-serif">1</text>
+  <text x="84" y="54" fill="#1c1814" font-size="12" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">Upload artwork image</text>
+  <text x="84" y="70" fill="#857568" font-size="10.5" font-family="ui-sans-serif,system-ui,sans-serif">High-res scan or photograph</text>
+  <line x1="52" y1="78" x2="52" y2="108" stroke="#ddd5ca" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <!-- Step 2 – Mask -->
+  <circle cx="52" cy="122" r="20" fill="#8b4513"/>
+  <text x="52" y="127" text-anchor="middle" fill="white" font-size="13" font-weight="700" font-family="ui-sans-serif,system-ui,sans-serif">2</text>
+  <text x="84" y="118" fill="#1c1814" font-size="12" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">Add damage mask</text>
+  <text x="84" y="134" fill="#857568" font-size="10.5" font-family="ui-sans-serif,system-ui,sans-serif">Define damaged regions</text>
+  <line x1="52" y1="142" x2="52" y2="172" stroke="#ddd5ca" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <!-- Step 3 – Generate -->
+  <circle cx="52" cy="186" r="20" fill="#8b4513"/>
+  <text x="52" y="191" text-anchor="middle" fill="white" font-size="13" font-weight="700" font-family="ui-sans-serif,system-ui,sans-serif">3</text>
+  <text x="84" y="182" fill="#1c1814" font-size="12" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">Generate preview</text>
+  <text x="84" y="198" fill="#857568" font-size="10.5" font-family="ui-sans-serif,system-ui,sans-serif">Brushstroke-aware inpainting</text>
+  <line x1="52" y1="206" x2="52" y2="236" stroke="#ddd5ca" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <!-- Step 4 – Review -->
+  <circle cx="52" cy="250" r="20" fill="#b87040"/>
+  <text x="52" y="255" text-anchor="middle" fill="white" font-size="13" font-weight="700" font-family="ui-sans-serif,system-ui,sans-serif">4</text>
+  <text x="84" y="246" fill="#1c1814" font-size="12" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">Review for planning</text>
+  <text x="84" y="262" fill="#857568" font-size="10.5" font-family="ui-sans-serif,system-ui,sans-serif">Triage and communicate</text>
+  <line x1="52" y1="270" x2="52" y2="300" stroke="#ddd5ca" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <!-- Step 5 – Export -->
+  <circle cx="52" cy="314" r="20" fill="#b87040"/>
+  <text x="52" y="319" text-anchor="middle" fill="white" font-size="13" font-weight="700" font-family="ui-sans-serif,system-ui,sans-serif">5</text>
+  <text x="84" y="310" fill="#1c1814" font-size="12" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">Export for documentation</text>
+  <text x="84" y="326" fill="#857568" font-size="10.5" font-family="ui-sans-serif,system-ui,sans-serif">Before/after for reports</text>
+
+  <!-- Vertical rule separating the two columns -->
+  <line x1="240" y1="24" x2="240" y2="372" stroke="#e8e1d8" stroke-width="1"/>
+
+  <!-- ── Right column: before/after artwork ── -->
+  <!-- "Before" frame -->
+  <rect x="256" y="32" width="200" height="155" rx="10" fill="#e8e1d8" stroke="#ddd5ca" stroke-width="1.5"/>
+  <!-- Canvas texture simulation -->
+  <rect x="264" y="40" width="184" height="139" rx="6" fill="#c8b99a"/>
+  <!-- Abstract painting "before" – warm dark tones with damage -->
+  <ellipse cx="356" cy="94" rx="60" ry="48" fill="#9e7a50" opacity="0.8"/>
+  <ellipse cx="320" cy="110" rx="35" ry="30" fill="#7a5c38" opacity="0.7"/>
+  <ellipse cx="400" cy="78" rx="30" ry="38" fill="#b08050" opacity="0.6"/>
+  <!-- Damage void (central paint loss) – light raw canvas showing through -->
+  <ellipse cx="356" cy="98" rx="24" ry="19" fill="#e0d5c5" stroke="#c8b0a0" stroke-width="1"/>
+  <ellipse cx="356" cy="98" rx="16" ry="12" fill="#d5c8b2"/>
+  <!-- Label -->
+  <rect x="264" y="149" width="60" height="18" rx="4" fill="rgba(28,24,20,0.55)"/>
+  <text x="294" y="162" text-anchor="middle" fill="white" font-size="9" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">BEFORE</text>
+  <!-- Frame label -->
+  <text x="356" y="208" text-anchor="middle" fill="#857568" font-size="10" font-family="ui-sans-serif,system-ui,sans-serif">Damaged painting</text>
+
+  <!-- Arrow connecting before → after -->
+  <path d="M356 216 L356 228" stroke="#8b4513" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M348 224 L356 232 L364 224" stroke="#8b4513" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="370" y="228" fill="#8b4513" font-size="9" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">ARTIFEX</text>
+
+  <!-- "After" frame -->
+  <rect x="256" y="236" width="200" height="155" rx="10" fill="#e8e1d8" stroke="#8b4513" stroke-width="1.5" opacity="0.8"/>
+  <rect x="264" y="244" width="184" height="139" rx="6" fill="#c8b99a"/>
+  <!-- Abstract painting "after" – same composition, damage filled -->
+  <ellipse cx="356" cy="298" rx="60" ry="48" fill="#9e7a50" opacity="0.8"/>
+  <ellipse cx="320" cy="314" rx="35" ry="30" fill="#7a5c38" opacity="0.7"/>
+  <ellipse cx="400" cy="282" rx="30" ry="38" fill="#b08050" opacity="0.6"/>
+  <!-- Filled damage area – blends smoothly -->
+  <ellipse cx="356" cy="302" rx="24" ry="19" fill="#9e7a50" opacity="0.85"/>
+  <ellipse cx="356" cy="300" rx="14" ry="11" fill="#8a6842" opacity="0.7"/>
+  <!-- Label -->
+  <rect x="264" y="353" width="62" height="18" rx="4" fill="rgba(139,69,19,0.75)"/>
+  <text x="295" y="366" text-anchor="middle" fill="white" font-size="9" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">PREVIEW</text>
+  <text x="356" y="405" text-anchor="middle" fill="#8b4513" font-size="10" font-family="ui-sans-serif,system-ui,sans-serif">Restoration preview</text>
+</svg>

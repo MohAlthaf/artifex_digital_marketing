@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" fill="none">
+  <!-- Background -->
+  <rect width="400" height="320" fill="#faf7f4"/>
+  <radialGradient id="bg-glow" cx="50%" cy="50%" r="60%">
+    <stop offset="0%" stop-color="#f5ebe0" stop-opacity="0.7"/>
+    <stop offset="100%" stop-color="#faf7f4" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="400" height="320" fill="url(#bg-glow)"/>
+
+  <!-- Decorative dots -->
+  <circle cx="40" cy="40" r="3" fill="#ddd5ca"/>
+  <circle cx="360" cy="40" r="3" fill="#ddd5ca"/>
+  <circle cx="40" cy="280" r="3" fill="#ddd5ca"/>
+  <circle cx="360" cy="280" r="3" fill="#ddd5ca"/>
+  <circle cx="200" cy="20" r="2" fill="#e8e1d8"/>
+  <circle cx="200" cy="300" r="2" fill="#e8e1d8"/>
+
+  <!-- Envelope body shadow -->
+  <rect x="68" y="102" width="268" height="176" rx="12" fill="#1c1814" opacity="0.07"/>
+  <!-- Envelope body -->
+  <rect x="64" y="98" width="272" height="176" rx="12" fill="#f5f0e8" stroke="#ddd5ca" stroke-width="1.5"/>
+
+  <!-- Envelope back flap (open) -->
+  <path d="M64 98 L200 178 L336 98" stroke="#ddd5ca" stroke-width="1.5" fill="#ece6da"/>
+  <path d="M64 98 Q200 64 336 98 L200 162 Z" fill="#f0e8d8" stroke="#ddd5ca" stroke-width="1.5"/>
+
+  <!-- Letter coming out of envelope -->
+  <!-- Letter paper shadow -->
+  <rect x="118" y="52" width="168" height="130" rx="6" fill="#1c1814" opacity="0.05" transform="translate(2,2)"/>
+  <!-- Letter paper -->
+  <rect x="116" y="50" width="168" height="130" rx="6" fill="white" stroke="#e8e1d8" stroke-width="1.5"/>
+  <!-- Letter content lines -->
+  <rect x="132" y="68" width="136" height="6" rx="2" fill="#f4efe8"/>
+  <rect x="132" y="80" width="120" height="5" rx="2" fill="#f4efe8"/>
+  <rect x="132" y="91" width="128" height="5" rx="2" fill="#f4efe8"/>
+  <rect x="132" y="102" width="110" height="5" rx="2" fill="#f4efe8"/>
+  <!-- Pilot stamp / badge on letter -->
+  <rect x="132" y="120" width="136" height="44" rx="6" fill="#f5ebe0" stroke="#8b4513" stroke-width="1.5" opacity="0.9"/>
+  <text x="200" y="138" text-anchor="middle" fill="#8b4513" font-size="10" font-weight="700" font-family="ui-sans-serif,system-ui,sans-serif" letter-spacing="2">PILOT PROGRAMME</text>
+  <text x="200" y="154" text-anchor="middle" fill="#b87040" font-size="8.5" font-family="ui-sans-serif,system-ui,sans-serif" letter-spacing="1">EARLY ACCESS INVITATION</text>
+
+  <!-- Wax seal -->
+  <!-- Seal shadow -->
+  <circle cx="290" cy="222" r="26" fill="#1c1814" opacity="0.06"/>
+  <!-- Seal circle -->
+  <circle cx="288" cy="220" r="26" fill="#8b4513"/>
+  <circle cx="288" cy="220" r="22" fill="#6d350f"/>
+  <!-- Seal inner ring -->
+  <circle cx="288" cy="220" r="18" fill="none" stroke="#b87040" stroke-width="1" opacity="0.5"/>
+  <!-- Seal text -->
+  <text x="288" y="215" text-anchor="middle" fill="#f5ebe0" font-size="8" font-weight="700" font-family="ui-sans-serif,system-ui,sans-serif" letter-spacing="1">ARTIFEX</text>
+  <text x="288" y="226" text-anchor="middle" fill="#b87040" font-size="7" font-family="ui-sans-serif,system-ui,sans-serif" letter-spacing="0.5">PILOT</text>
+
+  <!-- Envelope bottom flap fold line -->
+  <line x1="64" y1="274" x2="200" y2="194"/>
+  <line x1="336" y1="274" x2="200" y2="194"/>
+
+  <!-- Label at the bottom -->
+  <text x="200" y="296" text-anchor="middle" fill="#a08870" font-size="10" font-family="ui-sans-serif,system-ui,sans-serif" letter-spacing="1">Join the pilot programme</text>
+</svg>

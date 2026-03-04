@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <linearGradient id="portrait-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8a880"/>
+      <stop offset="100%" stop-color="#a08058"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#portrait-bg)"/>
+  <!-- Background drapery / curtain suggestion -->
+  <rect x="0" y="0" width="150" height="300" fill="#7a5c38" opacity="0.35"/>
+  <rect x="250" y="0" width="150" height="300" fill="#7a5c38" opacity="0.3"/>
+  <!-- Face: abstract portrait oval -->
+  <ellipse cx="200" cy="115" rx="58" ry="68" fill="#d4a878"/>
+  <!-- Neck / body -->
+  <ellipse cx="200" cy="225" rx="70" ry="80" fill="#c0906a"/>
+  <!-- Shadow on face -->
+  <ellipse cx="225" cy="110" rx="32" ry="38" fill="#b88858" opacity="0.45"/>
+  <!-- Eyes, nose suggestion (abstract) -->
+  <ellipse cx="182" cy="100" rx="8" ry="5" fill="#7a5c38" opacity="0.6"/>
+  <ellipse cx="218" cy="100" rx="8" ry="5" fill="#7a5c38" opacity="0.6"/>
+  <path d="M194 122 Q200 128 206 122" stroke="#9a7050" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <!-- Hair -->
+  <ellipse cx="200" cy="68" rx="60" ry="32" fill="#5a3820" opacity="0.8"/>
+  <!-- Edge flaking damage – irregular missing regions at edges, top, bottom -->
+  <!-- Left edge damage -->
+  <path d="M0 0 L28 0 L22 18 L30 32 L18 48 L26 64 L14 80 L24 96 L10 112 L22 128 L8 144 L20 160 L6 176 L18 192 L4 208 L16 224 L0 240 Z" fill="#faf7f4" opacity="0.9"/>
+  <!-- Right edge damage -->
+  <path d="M400 0 L368 0 L374 20 L364 36 L376 52 L362 68 L374 84 L360 100 L372 116 L358 132 L370 148 L356 164 L368 180 L354 196 L366 212 L352 228 L400 240 Z" fill="#faf7f4" opacity="0.9"/>
+  <!-- Top edge slight damage -->
+  <path d="M60 0 L80 12 L100 4 L120 14 L140 6 L160 16 L180 8 L200 14 L220 6 L240 14 L260 4 L280 12 L300 2 L320 10 L340 0 Z" fill="#faf7f4" opacity="0.9"/>
+  <!-- Damage detail – irregular chips/flakes showing canvas -->
+  <path d="M25 90 L48 88 L44 108 L20 105 Z" fill="#e0d5c5" opacity="0.7"/>
+  <path d="M352 70 L376 72 L374 92 L350 88 Z" fill="#e0d5c5" opacity="0.7"/>
+  <!-- Label -->
+  <rect x="12" y="268" width="70" height="22" rx="4" fill="rgba(28,24,20,0.6)"/>
+  <text x="47" y="283" text-anchor="middle" fill="white" font-size="11" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">Before</text>
+  <rect x="310" y="268" width="78" height="22" rx="4" fill="rgba(28,24,20,0.45)"/>
+  <text x="349" y="283" text-anchor="middle" fill="white" font-size="9.5" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">FLAKING</text>
+</svg>

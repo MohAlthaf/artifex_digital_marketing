@@ -1,0 +1,239 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import Button from "@/components/Button";
+import Card from "@/components/Card";
+import Section from "@/components/Section";
+import Container from "@/components/Container";
+import Pill from "@/components/Pill";
+import JsonLd from "@/components/JsonLd";
+import { BASE_URL, SITE_NAME } from "@/lib/constants";
+
+export const metadata: Metadata = {
+  title: "Digital Painting Restoration Workflow",
+  description:
+    "Discover the ARTIFEX digital painting restoration workflow — five steps from upload to documentation, with brushstroke-aware inpainting for museums and heritage teams.",
+  keywords: [
+    "digital painting restoration workflow",
+    "art restoration process",
+    "brushstroke-aware inpainting",
+    "museum digitisation workflow",
+  ],
+  alternates: { canonical: `${BASE_URL}/how-it-works` },
+  openGraph: {
+    title: "Digital Painting Restoration Workflow | ARTIFEX",
+    description:
+      "Five-step digital painting restoration workflow with brushstroke awareness. Upload, mask, preview, review, export.",
+    url: `${BASE_URL}/how-it-works`,
+    type: "website",
+    images: [{ url: "/og.svg", width: 1200, height: 630, alt: SITE_NAME }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digital Painting Restoration Workflow | ARTIFEX",
+  },
+};
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Digital Painting Restoration Workflow — ARTIFEX",
+  description:
+    "Five-step digital painting restoration workflow with brushstroke-aware inpainting for museums and heritage teams.",
+  url: `${BASE_URL}/how-it-works`,
+};
+
+const steps = [
+  {
+    number: "1",
+    title: "Upload artwork image",
+    desc: "Upload a high-resolution scan or photograph of the damaged painting. ARTIFEX supports standard image formats including TIFF, PNG, and JPEG.",
+  },
+  {
+    number: "2",
+    title: "Add damage mask",
+    desc: "Define the damaged regions by painting a mask over the areas that need restoration preview. The mask tells ARTIFEX exactly where to focus.",
+  },
+  {
+    number: "3",
+    title: "Generate restoration preview",
+    desc: "ARTIFEX analyses the surrounding brushstroke patterns and generates a restoration preview that matches the flow, rhythm, and texture of the original work.",
+  },
+  {
+    number: "4",
+    title: "Review for triage and planning",
+    desc: "Use the preview to assess damage severity, plan conservation priorities, and communicate potential outcomes to stakeholders.",
+  },
+  {
+    number: "5",
+    title: "Export for documentation",
+    desc: "Export the before/after previews along with metadata for conservation reports, grant proposals, and institutional archives.",
+  },
+];
+
+export default function HowItWorksPage() {
+  return (
+    <>
+      <JsonLd data={pageJsonLd} />
+
+      {/* ─── Hero ─── */}
+      <Section>
+        <Pill className="mb-5">Workflow</Pill>
+        <h1 className="max-w-2xl mb-6">
+          Digital painting restoration workflow for museum digitisation
+        </h1>
+        <p className="text-lg text-text-secondary leading-relaxed max-w-2xl">
+          Most restoration tools can fill missing areas, but results often look
+          smooth and artificial. ARTIFEX adds brushstroke awareness so the
+          filled region matches the surrounding stroke rhythm and texture style.
+        </p>
+      </Section>
+
+      {/* ─── Workflow block — image + steps ─── */}
+      <Section surface divider>
+        <h2 className="mb-10">Five-step workflow</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+          {/* Steps */}
+          <ol className="space-y-6">
+            {steps.map((step) => (
+              <li key={step.number} className="flex gap-4 items-start">
+                <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-accent text-white text-sm font-semibold shrink-0">
+                  {step.number}
+                </span>
+                <div>
+                  <h3 className="font-semibold text-base mb-1 text-text">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm text-text-secondary leading-relaxed">
+                    {step.desc}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ol>
+
+          {/* Workflow image */}
+          <div className="hidden lg:block">
+            <div className="bg-surface border border-border rounded-2xl shadow-[var(--shadow-md)] overflow-hidden">
+              <div className="relative aspect-[6/5]">
+                <Image
+                  src="/assets/illustrations/workflow.svg"
+                  alt="ARTIFEX five-step restoration workflow diagram showing upload, mask, generate, review, and export stages"
+                  fill
+                  className="object-contain p-4"
+                  sizes="500px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* ─── What makes it different ─── */}
+      <Section divider>
+        <h2 className="mb-10">What makes ARTIFEX different</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <Card title="Brushstroke flow consistency">
+            <p>
+              ARTIFEX analyses the directional flow of brushstrokes surrounding
+              the damaged area and ensures the filled region follows the same
+              stroke patterns, rather than producing flat, directionless fills.
+            </p>
+          </Card>
+          <Card title="Texture realism">
+            <p>
+              The restoration preview preserves the textural qualities of the
+              original paint surface — impasto, glazing, dry brush — so previews
+              look convincing under scrutiny.
+            </p>
+          </Card>
+          <Card title="Style-consistent learning">
+            <p>
+              ARTIFEX learns from the specific artwork being processed, adapting
+              to the artist&apos;s unique style rather than applying a generic
+              fill algorithm.
+            </p>
+          </Card>
+        </div>
+      </Section>
+
+      {/* ─── CTA ─── */}
+      <Section surface>
+        <div className="text-center max-w-lg mx-auto">
+          <h2 className="mb-4">Ready to try the workflow?</h2>
+          <p className="text-text-secondary mb-7">
+            Join the early-access pilot to test ARTIFEX with your own artwork
+            images.
+          </p>
+          <Button href="/early-access">Get Early Access</Button>
+        </div>
+      </Section>
+
+      {/* ─── Contextual links ─── */}
+      <Section>
+        <p className="text-sm text-muted text-center">
+          See real examples in the{" "}
+          <Link
+            href="/casebook"
+            className="text-accent hover:text-accent-hover underline underline-offset-4 decoration-accent/30 hover:decoration-accent/60 transition-colors"
+          >
+            casebook
+          </Link>
+          , or learn more{" "}
+          <Link
+            href="/about"
+            className="text-accent hover:text-accent-hover underline underline-offset-4 decoration-accent/30 hover:decoration-accent/60 transition-colors"
+          >
+            about ARTIFEX
+          </Link>
+          .
+        </p>
+      </Section>
+
+      {/* ─── SEO Change Log ─── */}
+      <Container className="pb-12">
+        <details className="text-xs text-muted border border-border-light rounded-lg p-4">
+          <summary className="cursor-pointer font-semibold">
+            SEO Change Log — How It Works Page
+          </summary>
+          <ul className="mt-3 space-y-2 list-disc list-inside">
+            <li>
+              <strong>Primary keyword:</strong> &quot;digital painting
+              restoration workflow&quot; — placed in H1, meta title, meta
+              description, intro paragraph, and JSON-LD.
+            </li>
+            <li>
+              <strong>Title tag:</strong> Keyword-first title under 60
+              characters, followed by brand name.
+            </li>
+            <li>
+              <strong>Meta description:</strong> Describes the five-step
+              workflow, includes keyword, under 155 characters.
+            </li>
+            <li>
+              <strong>H1:</strong> Single H1 with primary keyword and audience
+              qualifier (&quot;museum digitisation&quot;).
+            </li>
+            <li>
+              <strong>Heading hierarchy:</strong> H1 → H2 (Five-step workflow,
+              What makes ARTIFEX different) → H3 (individual steps and feature
+              cards).
+            </li>
+            <li>
+              <strong>Internal links:</strong> Links to /casebook and /about for
+              crawlability and topical relevance.
+            </li>
+            <li>
+              <strong>Structured data:</strong> WebPage JSON-LD with
+              keyword-rich name and description.
+            </li>
+            <li>
+              <strong>Canonical URL:</strong> Set to {`${"{BASE_URL}"}`}
+              /how-it-works.
+            </li>
+          </ul>
+        </details>
+      </Container>
+    </>
+  );
+}
