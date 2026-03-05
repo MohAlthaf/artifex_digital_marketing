@@ -5,6 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import { BASE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/constants";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import AnalyticsPageViews from "@/components/analytics-pageviews";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,9 +61,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
   return (
     <html lang="en">
-      <meta name="google-site-verification" content="s8r-tQAfb2kixhHQE5BRb3YPrRyDAeKmCkk0kASkXz4" />
+      <meta
+        name="google-site-verification"
+        content="s8r-tQAfb2kixhHQE5BRb3YPrRyDAeKmCkk0kASkXz4"
+      />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -70,6 +77,11 @@ export default function RootLayout({
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
+        {/* Loads GA4 gtag.js */}
+        {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
+
+        {/* Tracks route changes (important for Next.js navigation) */}
+        {gaId ? <AnalyticsPageViews gaId={gaId} /> : null}
       </body>
     </html>
   );
