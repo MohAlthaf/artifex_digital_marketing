@@ -1,4 +1,4 @@
-# ARTIFEX — Marketing Microsite
+# Artecho AI — Marketing Microsite
 
 > Brushstroke-aware restoration previews for damaged paintings.
 
@@ -25,13 +25,13 @@ Create a `.env.local` file in the project root (or set these in your shell):
 
 ```bash
 # Your production domain (used for canonical URLs, sitemap, OG tags)
-NEXT_PUBLIC_BASE_URL=https://artifex.example.com
+NEXT_PUBLIC_BASE_URL=https://artecho-ai.vercel.app
 
 # Your Google Form embed URL
 NEXT_PUBLIC_FORM_URL=https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true
 ```
 
-**To set BASE_URL:** Replace `https://artifex.example.com` with your actual deployment URL (e.g., `https://artifex.vercel.app`).
+**To set BASE_URL:** Replace `https://artecho-ai.vercel.app` with your actual deployment URL (e.g., `https://artecho-ai.vercel.app`).
 
 **To set FORM_URL:** Create a Google Form, click "Send" → "Embed", and copy the `src` URL from the iframe snippet.
 
@@ -108,13 +108,13 @@ evidence/                       # Generated screenshots (git-ignored)
 
 ## Pages
 
-| Route | Page | Primary Keyword |
-|---|---|---|
-| `/` | Home | brushstroke-aware restoration preview |
-| `/how-it-works` | How It Works | digital painting restoration workflow |
-| `/casebook` | Casebook | — |
-| `/early-access` | Early Access (email capture) | — |
-| `/about` | About + FAQ | — |
+| Route           | Page                         | Primary Keyword                       |
+| --------------- | ---------------------------- | ------------------------------------- |
+| `/`             | Home                         | brushstroke-aware restoration preview |
+| `/how-it-works` | How It Works                 | digital painting restoration workflow |
+| `/casebook`     | Casebook                     | —                                     |
+| `/early-access` | Early Access (email capture) | —                                     |
+| `/about`        | About + FAQ                  | —                                     |
 
 ---
 
@@ -205,10 +205,13 @@ git tag evidence/after
 ## Email Capture
 
 ### Primary: Google Form embed
+
 The Early Access page embeds a Google Form iframe at the very top. Set `NEXT_PUBLIC_FORM_URL` in `.env.local` to your form URL.
 
 ### Fallback: HTML form → API route
+
 A secondary HTML form on the same page posts to `/api/lead`. The API:
+
 - Validates the email address
 - Logs the lead to the server console
 - Returns a JSON success/error response

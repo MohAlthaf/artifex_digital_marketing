@@ -10,27 +10,27 @@ import JsonLd from "@/components/JsonLd";
 import { BASE_URL, SITE_NAME } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "About ARTIFEX — Brushstroke-Aware Restoration Previews",
+  title: "About Artecho AI — Brushstroke-Aware Restoration Previews",
   description:
-    "Learn about ARTIFEX, the brushstroke-aware restoration preview tool for museums, heritage labs, and conservation educators. FAQ and contact information.",
+    "Learn about Artecho AI, the brushstroke-aware restoration preview tool for museums, heritage labs, and conservation educators. FAQ and contact information.",
   alternates: { canonical: `${BASE_URL}/about` },
   openGraph: {
-    title: "About ARTIFEX",
+    title: "About Artecho AI",
     description:
-      "Learn about ARTIFEX — the brushstroke-aware restoration preview tool for museums and heritage teams.",
+      "Learn about Artecho AI — the brushstroke-aware restoration preview tool for museums and heritage teams.",
     url: `${BASE_URL}/about`,
     type: "website",
     images: [{ url: "/og.svg", width: 1200, height: 630, alt: SITE_NAME }],
   },
-  twitter: { card: "summary_large_image", title: "About ARTIFEX" },
+  twitter: { card: "summary_large_image", title: "About Artecho AI" },
 };
 
 const pageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "About ARTIFEX",
+  name: "About Artecho AI",
   description:
-    "ARTIFEX is a brushstroke-aware restoration preview tool for museums and heritage teams.",
+    "Artecho AI is a brushstroke-aware restoration preview tool for museums and heritage teams.",
   url: `${BASE_URL}/about`,
 };
 
@@ -40,34 +40,34 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Is ARTIFEX a replacement for conservators?",
+      name: "Is Artecho AI a replacement for conservators?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. ARTIFEX is a preview and documentation tool. It generates visual previews of potential restoration outcomes to help with triage and planning. Final restoration decisions should always be made by qualified conservators.",
+        text: "No. Artecho AI is a preview and documentation tool. It generates visual previews of potential restoration outcomes to help with triage and planning. Final restoration decisions should always be made by qualified conservators.",
       },
     },
     {
       "@type": "Question",
-      name: "What inputs does ARTIFEX require?",
+      name: "What inputs does Artecho AI require?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "ARTIFEX requires two inputs: a high-resolution image of the artwork and a damage mask that defines the regions to be previewed.",
+        text: "Artecho AI requires two inputs: a high-resolution image of the artwork and a damage mask that defines the regions to be previewed.",
       },
     },
     {
       "@type": "Question",
-      name: "What does ARTIFEX output?",
+      name: "What does Artecho AI output?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "ARTIFEX generates a restoration preview image and optional notes. The preview shows the artwork with damaged areas filled using brushstroke-aware inpainting. Outputs can be exported for documentation and reporting.",
+        text: "Artecho AI generates a restoration preview image and optional notes. The preview shows the artwork with damaged areas filled using brushstroke-aware inpainting. Outputs can be exported for documentation and reporting.",
       },
     },
     {
       "@type": "Question",
-      name: "Is ARTIFEX available as a pilot?",
+      name: "Is Artecho AI available as a pilot?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. ARTIFEX is currently in early-access pilot mode for museums, heritage labs, and research teams.",
+        text: "Yes. Artecho AI is currently in early-access pilot mode for museums, heritage labs, and research teams.",
       },
     },
   ],
@@ -75,20 +75,20 @@ const faqJsonLd = {
 
 const faqs = [
   {
-    q: "Is ARTIFEX a replacement for conservators?",
-    a: "No. ARTIFEX is a preview and documentation tool. It generates visual previews of potential restoration outcomes to help with triage and planning. Final restoration decisions should always be made by qualified conservators.",
+    q: "Is Artecho AI a replacement for conservators?",
+    a: "No. Artecho AI is a preview and documentation tool. It generates visual previews of potential restoration outcomes to help with triage and planning. Final restoration decisions should always be made by qualified conservators.",
   },
   {
-    q: "What inputs does ARTIFEX require?",
-    a: "ARTIFEX requires two inputs: a high-resolution image of the artwork and a damage mask that defines the regions to be previewed. The mask can be created using standard image editing tools or ARTIFEX's built-in masking interface.",
+    q: "What inputs does Artecho AI require?",
+    a: "Artecho AI requires two inputs: a high-resolution image of the artwork and a damage mask that defines the regions to be previewed. The mask can be created using standard image editing tools or Artecho AI's built-in masking interface.",
   },
   {
-    q: "What does ARTIFEX output?",
-    a: "ARTIFEX generates a restoration preview image and optional notes. The preview shows the artwork with damaged areas filled using brushstroke-aware inpainting. Outputs can be exported for documentation and reporting.",
+    q: "What does Artecho AI output?",
+    a: "Artecho AI generates a restoration preview image and optional notes. The preview shows the artwork with damaged areas filled using brushstroke-aware inpainting. Outputs can be exported for documentation and reporting.",
   },
   {
-    q: "Is ARTIFEX available as a pilot?",
-    a: "Yes. ARTIFEX is currently in early-access pilot mode for museums, heritage labs, and research teams. You can apply for access through our early access page.",
+    q: "Is Artecho AI available as a pilot?",
+    a: "Yes. Artecho AI is currently in early-access pilot mode for museums, heritage labs, and research teams. You can apply for access through our early access page.",
   },
 ];
 
@@ -106,7 +106,7 @@ export default function AboutPage() {
         />
         <Container className="relative z-10 pt-20 pb-20 sm:pt-28 sm:pb-24">
           <Pill className="mb-5">About</Pill>
-          <h1 className="max-w-xl mb-5">About ARTIFEX</h1>
+          <h1 className="max-w-xl mb-5">About Artecho AI</h1>
           <p className="text-[1.0625rem] text-text-secondary leading-relaxed max-w-[520px]">
             Brushstroke-aware restoration previews for museum digitisation,
             heritage labs, and conservation educators.
@@ -118,16 +118,18 @@ export default function AboutPage() {
       <Section>
         <div className="max-w-2xl">
           <p className="text-lg text-text-secondary leading-relaxed mb-5">
-            ARTIFEX is a brushstroke-aware restoration preview tool designed for
-            museum digitisation teams, heritage laboratories, and conservation
-            educators. It generates believable restoration previews that respect
-            the stroke rhythm, texture, and style of damaged paintings — helping
-            teams plan, document, and communicate conservation needs faster.
+            Artecho AI is a brushstroke-aware restoration preview tool designed
+            for museum digitisation teams, heritage laboratories, and
+            conservation educators. It generates believable restoration previews
+            that respect the stroke rhythm, texture, and style of damaged
+            paintings — helping teams plan, document, and communicate
+            conservation needs faster.
           </p>
           <p className="text-base text-text-secondary leading-relaxed">
-            Built on research in computational art analysis, ARTIFEX bridges the
-            gap between damage documentation and conservation planning. It does
-            not replace expert hands — it gives them better tools to see ahead.
+            Built on research in computational art analysis, Artecho AI bridges
+            the gap between damage documentation and conservation planning. It
+            does not replace expert hands — it gives them better tools to see
+            ahead.
           </p>
         </div>
       </Section>
@@ -142,7 +144,7 @@ export default function AboutPage() {
           {[
             {
               title: "Preview, not prescription",
-              desc: "ARTIFEX generates visual previews to inform decisions — not replace the expert conservator. Every output is clearly labelled as a preview.",
+              desc: "Artecho AI generates visual previews to inform decisions — not replace the expert conservator. Every output is clearly labelled as a preview.",
             },
             {
               title: "Honest about limitations",
@@ -173,8 +175,8 @@ export default function AboutPage() {
         <div className="text-center max-w-lg mx-auto">
           <h2 className="mb-4">Join the pilot programme</h2>
           <p className="text-text-secondary mb-7">
-            ARTIFEX is in early access. Join museums and research teams testing
-            brushstroke-aware restoration previews.
+            Artecho AI is in early access. Join museums and research teams
+            testing brushstroke-aware restoration previews.
           </p>
           <Button href="/early-access">Get Early Access</Button>
         </div>
@@ -185,26 +187,26 @@ export default function AboutPage() {
         <h2 className="mb-6">Contact</h2>
         <Card hover={false} className="max-w-lg">
           <p className="mb-4">
-            For questions about the ARTIFEX pilot, partnerships, or research
+            For questions about the Artecho AI pilot, partnerships, or research
             collaboration:
           </p>
           <ul className="space-y-2 text-sm">
             <li>
               <span className="font-medium text-text">Email — </span>
               <a
-                href="mailto:hello@artifex.example.com"
+                href="mailto:hello@artecho-ai.com"
                 className="text-accent hover:text-accent-hover underline underline-offset-4 decoration-accent/30 hover:decoration-accent/60 transition-colors"
               >
-                hello@artifex.example.com
+                hello@artecho-ai.com
               </a>
             </li>
             <li>
               <span className="font-medium text-text">Research — </span>
               <a
-                href="mailto:research@artifex.example.com"
+                href="mailto:research@artecho-ai.com"
                 className="text-accent hover:text-accent-hover underline underline-offset-4 decoration-accent/30 hover:decoration-accent/60 transition-colors"
               >
-                research@artifex.example.com
+                research@artecho-ai.com
               </a>
             </li>
           </ul>

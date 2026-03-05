@@ -12,7 +12,7 @@ import { BASE_URL, SITE_NAME } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Digital Painting Restoration Workflow",
   description:
-    "Discover the ARTIFEX digital painting restoration workflow — five steps from upload to documentation, with brushstroke-aware inpainting for museums and heritage teams.",
+    "Discover the Artecho AI digital painting restoration workflow — five steps from upload to documentation, with brushstroke-aware inpainting for museums and heritage teams.",
   keywords: [
     "digital painting restoration workflow",
     "art restoration process",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: `${BASE_URL}/how-it-works` },
   openGraph: {
-    title: "Digital Painting Restoration Workflow | ARTIFEX",
+    title: "Digital Painting Restoration Workflow | Artecho AI",
     description:
       "Five-step digital painting restoration workflow with brushstroke awareness. Upload, mask, preview, review, export.",
     url: `${BASE_URL}/how-it-works`,
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digital Painting Restoration Workflow | ARTIFEX",
+    title: "Digital Painting Restoration Workflow | Artecho AI",
   },
 };
 
 const pageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Digital Painting Restoration Workflow — ARTIFEX",
+  name: "Digital Painting Restoration Workflow — Artecho AI",
   description:
     "Five-step digital painting restoration workflow with brushstroke-aware inpainting for museums and heritage teams.",
   url: `${BASE_URL}/how-it-works`,
@@ -47,17 +47,17 @@ const steps = [
   {
     number: "1",
     title: "Upload artwork image",
-    desc: "Upload a high-resolution scan or photograph of the damaged painting. ARTIFEX supports standard image formats including TIFF, PNG, and JPEG.",
+    desc: "Upload a high-resolution scan or photograph of the damaged painting. Artecho AI supports standard image formats including TIFF, PNG, and JPEG.",
   },
   {
     number: "2",
     title: "Add damage mask",
-    desc: "Define the damaged regions by painting a mask over the areas that need restoration preview. The mask tells ARTIFEX exactly where to focus.",
+    desc: "Define the damaged regions by painting a mask over the areas that need restoration preview. The mask tells Artecho AI exactly where to focus.",
   },
   {
     number: "3",
     title: "Generate restoration preview",
-    desc: "ARTIFEX analyses the surrounding brushstroke patterns and generates a restoration preview that matches the flow, rhythm, and texture of the original work.",
+    desc: "Artecho AI analyses the surrounding brushstroke patterns and generates a restoration preview that matches the flow, rhythm, and texture of the original work.",
   },
   {
     number: "4",
@@ -84,7 +84,7 @@ export default function HowItWorksPage() {
         </h1>
         <p className="text-lg text-text-secondary leading-relaxed max-w-2xl">
           Most restoration tools can fill missing areas, but results often look
-          smooth and artificial. ARTIFEX adds brushstroke awareness so the
+          smooth and artificial. Artecho AI adds brushstroke awareness so the
           filled region matches the surrounding stroke rhythm and texture style.
         </p>
       </Section>
@@ -118,7 +118,7 @@ export default function HowItWorksPage() {
               <div className="relative aspect-[6/5]">
                 <Image
                   src="/assets/illustrations/workflow.svg"
-                  alt="ARTIFEX five-step restoration workflow diagram showing upload, mask, generate, review, and export stages"
+                  alt="Artecho AI five-step restoration workflow diagram showing upload, mask, generate, review, and export stages"
                   fill
                   className="object-contain p-4"
                   sizes="500px"
@@ -131,13 +131,14 @@ export default function HowItWorksPage() {
 
       {/* ─── What makes it different ─── */}
       <Section divider>
-        <h2 className="mb-10">What makes ARTIFEX different</h2>
+        <h2 className="mb-10">What makes Artecho AI different</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           <Card title="Brushstroke flow consistency">
             <p>
-              ARTIFEX analyses the directional flow of brushstrokes surrounding
-              the damaged area and ensures the filled region follows the same
-              stroke patterns, rather than producing flat, directionless fills.
+              Artecho AI analyses the directional flow of brushstrokes
+              surrounding the damaged area and ensures the filled region follows
+              the same stroke patterns, rather than producing flat,
+              directionless fills.
             </p>
           </Card>
           <Card title="Texture realism">
@@ -149,9 +150,9 @@ export default function HowItWorksPage() {
           </Card>
           <Card title="Style-consistent learning">
             <p>
-              ARTIFEX learns from the specific artwork being processed, adapting
-              to the artist&apos;s unique style rather than applying a generic
-              fill algorithm.
+              Artecho AI learns from the specific artwork being processed,
+              adapting to the artist&apos;s unique style rather than applying a
+              generic fill algorithm.
             </p>
           </Card>
         </div>
@@ -162,7 +163,7 @@ export default function HowItWorksPage() {
         <div className="text-center max-w-lg mx-auto">
           <h2 className="mb-4">Ready to try the workflow?</h2>
           <p className="text-text-secondary mb-7">
-            Join the early-access pilot to test ARTIFEX with your own artwork
+            Join the early-access pilot to test Artecho AI with your own artwork
             images.
           </p>
           <Button href="/early-access">Get Early Access</Button>
@@ -184,7 +185,7 @@ export default function HowItWorksPage() {
             href="/about"
             className="text-accent hover:text-accent-hover underline underline-offset-4 decoration-accent/30 hover:decoration-accent/60 transition-colors"
           >
-            about ARTIFEX
+            about Artecho AI
           </Link>
           .
         </p>
@@ -216,8 +217,8 @@ export default function HowItWorksPage() {
             </li>
             <li>
               <strong>Heading hierarchy:</strong> H1 → H2 (Five-step workflow,
-              What makes ARTIFEX different) → H3 (individual steps and feature
-              cards).
+              What makes Artecho AI different) → H3 (individual steps and
+              feature cards).
             </li>
             <li>
               <strong>Internal links:</strong> Links to /casebook and /about for

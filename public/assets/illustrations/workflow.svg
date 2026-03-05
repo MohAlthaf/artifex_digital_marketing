@@ -67,7 +67,7 @@
   <!-- Arrow connecting before → after -->
   <path d="M356 216 L356 228" stroke="#8b4513" stroke-width="1.5" stroke-linecap="round"/>
   <path d="M348 224 L356 232 L364 224" stroke="#8b4513" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  <text x="370" y="228" fill="#8b4513" font-size="9" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">ARTIFEX</text>
+  <text x="370" y="228" fill="#8b4513" font-size="9" font-weight="600" font-family="ui-sans-serif,system-ui,sans-serif">ARTECHO AI</text>
 
   <!-- "After" frame -->
   <rect x="256" y="236" width="200" height="155" rx="10" fill="#e8e1d8" stroke="#8b4513" stroke-width="1.5" opacity="0.8"/>

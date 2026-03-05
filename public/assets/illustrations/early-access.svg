@@ -48,7 +48,7 @@
   <!-- Seal inner ring -->
   <circle cx="288" cy="220" r="18" fill="none" stroke="#b87040" stroke-width="1" opacity="0.5"/>
   <!-- Seal text -->
-  <text x="288" y="215" text-anchor="middle" fill="#f5ebe0" font-size="8" font-weight="700" font-family="ui-sans-serif,system-ui,sans-serif" letter-spacing="1">ARTIFEX</text>
+  <text x="288" y="215" text-anchor="middle" fill="#f5ebe0" font-size="8" font-weight="700" font-family="ui-sans-serif,system-ui,sans-serif" letter-spacing="1">ARTECHO AI</text>
   <text x="288" y="226" text-anchor="middle" fill="#b87040" font-size="7" font-family="ui-sans-serif,system-ui,sans-serif" letter-spacing="0.5">PILOT</text>
 
   <!-- Envelope bottom flap fold line -->

@@ -12,9 +12,9 @@ import JsonLd from "@/components/JsonLd";
 import { BASE_URL, SITE_NAME } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Brushstroke-Aware Art Restoration Previews | ARTIFEX",
+  title: "Brushstroke-Aware Art Restoration Previews | Artecho AI",
   description:
-    "ARTIFEX generates brushstroke-aware restoration previews for damaged paintings. Fast, believable visuals for museum digitisation teams — triage, planning, and documentation.",
+    "Artecho AI generates brushstroke-aware restoration previews for damaged paintings. Fast, believable visuals for museum digitisation teams — triage, planning, and documentation.",
   keywords: [
     "brushstroke-aware restoration preview",
     "art restoration preview",
@@ -24,25 +24,25 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: BASE_URL },
   openGraph: {
-    title: "Brushstroke-Aware Art Restoration Previews | ARTIFEX",
+    title: "Brushstroke-Aware Art Restoration Previews | Artecho AI",
     description:
-      "ARTIFEX generates brushstroke-aware restoration previews for damaged paintings. Fast, believable visuals for museum digitisation teams.",
+      "Artecho AI generates brushstroke-aware restoration previews for damaged paintings. Fast, believable visuals for museum digitisation teams.",
     url: BASE_URL,
     type: "website",
     images: [{ url: "/og.svg", width: 1200, height: 630, alt: SITE_NAME }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ARTIFEX — Brushstroke-Aware Restoration Previews",
+    title: "Artecho AI — Brushstroke-Aware Restoration Previews",
   },
 };
 
 const pageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "ARTIFEX — Brushstroke-Aware Art Restoration Previews",
+  name: "Artecho AI — Brushstroke-Aware Art Restoration Previews",
   description:
-    "ARTIFEX generates brushstroke-aware restoration previews for damaged paintings. Fast, believable visuals for museum digitisation teams.",
+    "Artecho AI generates brushstroke-aware restoration previews for damaged paintings. Fast, believable visuals for museum digitisation teams.",
   url: BASE_URL,
 };
 
@@ -63,7 +63,7 @@ const valuePillars = [
     symbol: "III",
     title: "Non-destructive + exportable",
     description:
-      "ARTIFEX generates previews without altering the source. Before/after exports are ready for reports and archives.",
+      "Artecho AI generates previews without altering the source. Before/after exports are ready for reports and archives.",
   },
 ];
 
@@ -132,9 +132,10 @@ export default function HomePage() {
                 Brushstroke-aware art restoration previews in minutes
               </h1>
               <p className="text-[1.0625rem] text-text-secondary leading-relaxed mb-8 max-w-[520px]">
-                ARTIFEX generates restoration previews that respect brushstroke
-                flow and texture. Built for digitisation teams who need fast,
-                believable visuals for triage, planning, and documentation.
+                Artecho AI generates restoration previews that respect
+                brushstroke flow and texture. Built for digitisation teams who
+                need fast, believable visuals for triage, planning, and
+                documentation.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button href="/early-access">Get Early Access</Button>
@@ -155,7 +156,7 @@ export default function HomePage() {
               <div className="w-full max-w-[480px] rounded-2xl border border-border bg-surface/80 shadow-[var(--shadow-lg)] overflow-hidden backdrop-blur-sm">
                 <Image
                   src="/assets/illustrations/workflow.svg"
-                  alt="ARTIFEX five-step restoration workflow: upload, mask, generate, review, export"
+                  alt="Artecho AI five-step restoration workflow: upload, mask, generate, review, export"
                   width={480}
                   height={395}
                   priority
@@ -195,8 +196,8 @@ export default function HomePage() {
       {/* ─── 3 Value Pillars ─── */}
       <Section>
         <div className="mb-10 max-w-xl">
-          <Pill className="mb-4">Why ARTIFEX</Pill>
-          <h2 className="text-text">Three reasons teams choose ARTIFEX</h2>
+          <Pill className="mb-4">Why Artecho AI</Pill>
+          <h2 className="text-text">Three reasons teams choose Artecho AI</h2>
         </div>
         <FeatureGrid items={valuePillars} columns={3} />
       </Section>
@@ -207,7 +208,7 @@ export default function HomePage() {
           <Pill className="mb-4">Audience</Pill>
           <h2 className="text-text">Who it&apos;s for</h2>
           <p className="mt-3 text-text-secondary max-w-lg">
-            ARTIFEX is built specifically for teams who work with damaged
+            Artecho AI is built specifically for teams who work with damaged
             artworks at scale.
           </p>
         </div>
@@ -257,9 +258,9 @@ export default function HomePage() {
             Preview and documentation tool, not a replacement for conservators
           </p>
           <p>
-            ARTIFEX is designed to help museum and heritage teams visualise
+            Artecho AI is designed to help museum and heritage teams visualise
             potential outcomes quickly. The final restoration always requires
-            expert hands. We built ARTIFEX to give those hands better
+            expert hands. We built Artecho AI to give those hands better
             information.
           </p>
         </Callout>

@@ -54,18 +54,18 @@ export default function Footer() {
             <ul className="space-y-2.5" role="list">
               <li>
                 <a
-                  href="mailto:hello@artifex.example.com"
+                  href="mailto:hello@artecho-ai.com"
                   className="text-sm text-white/45 hover:text-white/80 transition-colors duration-150"
                 >
-                  hello@artifex.example.com
+                  hello@artecho-ai.com
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:research@artifex.example.com"
+                  href="mailto:research@artecho-ai.com"
                   className="text-sm text-white/45 hover:text-white/80 transition-colors duration-150"
                 >
-                  research@artifex.example.com
+                  research@artecho-ai.com
                 </a>
               </li>
             </ul>
@@ -74,9 +74,9 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <p className="text-xs text-white/25 leading-relaxed max-w-xl">
-            ARTIFEX is a preview and documentation tool for conservation teams.
-            It does not replace expert conservators or professional restoration
-            workflows.
+            Artecho AI is a preview and documentation tool for conservation
+            teams. It does not replace expert conservators or professional
+            restoration workflows.
           </p>
           <p className="text-xs text-white/18 shrink-0">
             &copy; {year} {SITE_NAME}
