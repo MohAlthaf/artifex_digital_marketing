@@ -7,6 +7,7 @@ import JsonLd from "@/components/JsonLd";
 import { BASE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/constants";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import AnalyticsPageViews from "@/components/analytics-pageviews";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -81,7 +82,11 @@ export default function RootLayout({
         {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
 
         {/* Tracks route changes (important for Next.js navigation) */}
-        {gaId ? <AnalyticsPageViews gaId={gaId} /> : null}
+        {gaId ? (
+          <Suspense fallback={null}>
+            <AnalyticsPageViews gaId={gaId} />
+          </Suspense>
+        ) : null}
       </body>
     </html>
   );
