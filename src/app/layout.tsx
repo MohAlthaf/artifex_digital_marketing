@@ -40,6 +40,9 @@ export const metadata: Metadata = {
     images: ["/og.svg"],
   },
   robots: { index: true, follow: true },
+  verification: {
+    google: "s8r-tQAfb2kixhHQE5BRb3YPrRyDAeKmCkk0kASkXz4",
+  },
 };
 
 const organizationJsonLd = {
@@ -68,10 +71,6 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <meta
-        name="google-site-verification"
-        content="s8r-tQAfb2kixhHQE5BRb3YPrRyDAeKmCkk0kASkXz4"
-      />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
