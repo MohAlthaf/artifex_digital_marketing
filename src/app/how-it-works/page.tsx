@@ -7,12 +7,14 @@ import Section from "@/components/Section";
 import Container from "@/components/Container";
 import Pill from "@/components/Pill";
 import JsonLd from "@/components/JsonLd";
+import SeoChangeLog from "@/components/SeoChangeLog";
+import PageHero from "@/components/PageHero";
 import { BASE_URL, SITE_NAME } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Digital Painting Restoration Workflow",
+  title: "Digital Painting Restoration Workflow | Artecho AI",
   description:
-    "Discover the Artecho AI digital painting restoration workflow — five steps from upload to documentation, with brushstroke-aware inpainting for museums and heritage teams.",
+    "Discover the Artecho AI digital painting restoration workflow — five steps from upload to documentation, with brushstroke-aware inpainting and restoration previews for documentation.",
   keywords: [
     "digital painting restoration workflow",
     "art restoration process",
@@ -23,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Digital Painting Restoration Workflow | Artecho AI",
     description:
-      "Five-step digital painting restoration workflow with brushstroke awareness. Upload, mask, preview, review, export.",
+      "Five-step digital painting restoration workflow with brushstroke-aware inpainting. Upload, mask, generate, review, and export restoration previews for documentation.",
     url: `${BASE_URL}/how-it-works`,
     type: "website",
     images: [{ url: "/og.svg", width: 1200, height: 630, alt: SITE_NAME }],
@@ -39,7 +41,7 @@ const pageJsonLd = {
   "@type": "WebPage",
   name: "Digital Painting Restoration Workflow — Artecho AI",
   description:
-    "Five-step digital painting restoration workflow with brushstroke-aware inpainting for museums and heritage teams.",
+    "Five-step digital painting restoration workflow with brushstroke-aware inpainting and restoration previews for documentation.",
   url: `${BASE_URL}/how-it-works`,
 };
 
@@ -52,22 +54,22 @@ const steps = [
   {
     number: "2",
     title: "Add damage mask",
-    desc: "Define the damaged regions by painting a mask over the areas that need restoration preview. The mask tells Artecho AI exactly where to focus.",
+    desc: "Define the damaged regions by painting a mask over the areas that need restoration. The mask tells Artecho AI exactly where to focus.",
   },
   {
     number: "3",
     title: "Generate restoration preview",
-    desc: "Artecho AI analyses the surrounding brushstroke patterns and generates a restoration preview that matches the flow, rhythm, and texture of the original work.",
+    desc: "Artecho AI analyses the surrounding brushstroke patterns and generates a restoration output that matches the flow, rhythm, and texture of the original work.",
   },
   {
     number: "4",
     title: "Review for triage and planning",
-    desc: "Use the preview to assess damage severity, plan conservation priorities, and communicate potential outcomes to stakeholders.",
+    desc: "Use the result to assess damage severity, plan conservation priorities, and communicate potential outcomes to stakeholders.",
   },
   {
     number: "5",
     title: "Export for documentation",
-    desc: "Export the before/after previews along with metadata for conservation reports, grant proposals, and institutional archives.",
+    desc: "Export the before/after comparisons along with metadata for conservation reports, grant proposals, and institutional archives.",
   },
 ];
 
@@ -77,7 +79,11 @@ export default function HowItWorksPage() {
       <JsonLd data={pageJsonLd} />
 
       {/* ─── Hero ─── */}
-      <Section>
+      <PageHero
+        title="Digital painting restoration workflow for museum digitisation"
+        subtitle="Most restoration tools can fill missing areas, but results often look smooth and artificial. Artecho AI adds brushstroke awareness so the filled region matches the surrounding stroke rhythm and texture style."
+        backgroundImage="/images/heroes/how-it-works-hero.svg"
+      >
         <Pill className="mb-5">Workflow</Pill>
         <h1 className="max-w-2xl mb-6">
           Digital painting restoration workflow for museum digitisation
@@ -87,11 +93,11 @@ export default function HowItWorksPage() {
           smooth and artificial. Artecho AI adds brushstroke awareness so the
           filled region matches the surrounding stroke rhythm and texture style.
         </p>
-      </Section>
+      </PageHero>
 
       {/* ─── Workflow block — image + steps ─── */}
       <Section surface divider>
-        <h2 className="mb-10">Five-step workflow</h2>
+        <h2 className="mb-10">Five-step brushstroke-aware inpainting workflow</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
           {/* Steps */}
           <ol className="space-y-6">
@@ -131,7 +137,7 @@ export default function HowItWorksPage() {
 
       {/* ─── What makes it different ─── */}
       <Section divider>
-        <h2 className="mb-10">What makes Artecho AI different</h2>
+        <h2 className="mb-10">What makes Artecho AI different for restoration previews and documentation</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           <Card title="Brushstroke flow consistency">
             <p>
@@ -143,8 +149,8 @@ export default function HowItWorksPage() {
           </Card>
           <Card title="Texture realism">
             <p>
-              The restoration preview preserves the textural qualities of the
-              original paint surface — impasto, glazing, dry brush — so previews
+              The restoration output preserves the textural qualities of the
+              original paint surface — impasto, glazing, dry brush — so results
               look convincing under scrutiny.
             </p>
           </Card>
@@ -161,7 +167,7 @@ export default function HowItWorksPage() {
       {/* ─── CTA ─── */}
       <Section surface>
         <div className="text-center max-w-lg mx-auto">
-          <h2 className="mb-4">Ready to try the workflow?</h2>
+          <h2 className="mb-4">Try the restoration workflow with your own artworks</h2>
           <p className="text-text-secondary mb-7">
             Join the early-access pilot to test Artecho AI with your own artwork
             images.
@@ -193,48 +199,46 @@ export default function HowItWorksPage() {
 
       {/* ─── SEO Change Log ─── */}
       <Container className="pb-12">
-        <details className="text-xs text-muted border border-border-light rounded-lg p-4">
-          <summary className="cursor-pointer font-semibold">
-            SEO Change Log — How It Works Page
-          </summary>
-          <ul className="mt-3 space-y-2 list-disc list-inside">
-            <li>
-              <strong>Primary keyword:</strong> &quot;digital painting
-              restoration workflow&quot; — placed in H1, meta title, meta
-              description, intro paragraph, and JSON-LD.
-            </li>
-            <li>
-              <strong>Title tag:</strong> Keyword-first title under 60
-              characters, followed by brand name.
-            </li>
-            <li>
-              <strong>Meta description:</strong> Describes the five-step
-              workflow, includes keyword, under 155 characters.
-            </li>
-            <li>
-              <strong>H1:</strong> Single H1 with primary keyword and audience
-              qualifier (&quot;museum digitisation&quot;).
-            </li>
-            <li>
-              <strong>Heading hierarchy:</strong> H1 → H2 (Five-step workflow,
-              What makes Artecho AI different) → H3 (individual steps and
-              feature cards).
-            </li>
-            <li>
-              <strong>Internal links:</strong> Links to /casebook and /about for
-              crawlability and topical relevance.
-            </li>
-            <li>
-              <strong>Structured data:</strong> WebPage JSON-LD with
-              keyword-rich name and description.
-            </li>
-            <li>
-              <strong>Canonical URL:</strong> Set to {`${"{BASE_URL}"}`}
-              /how-it-works.
-            </li>
-          </ul>
-        </details>
+        <SeoChangeLog title="SEO Change Log — How It Works Page">
+          <li>
+            <strong>Primary keyword:</strong> &quot;digital painting
+            restoration workflow&quot; — placed in H1, meta title, meta
+            description, intro paragraph, and JSON-LD.
+          </li>
+          <li>
+            <strong>Title tag:</strong> Updated to include brand name, under
+            60 characters.
+          </li>
+          <li>
+            <strong>Meta description:</strong> Updated to include
+            &quot;restoration previews for documentation&quot; secondary
+            keyword.
+          </li>
+          <li>
+            <strong>H1:</strong> Single H1 with primary keyword and audience
+            qualifier (&quot;museum digitisation&quot;).
+          </li>
+          <li>
+            <strong>H2 updates:</strong> &quot;Five-step workflow&quot;
+            updated to &quot;Five-step brushstroke-aware inpainting
+            workflow&quot;. Added secondary keywords to other H2 headings.
+          </li>
+          <li>
+            <strong>Keyword density:</strong> Reduced &quot;preview&quot;
+            occurrences using synonyms: &quot;output&quot;,
+            &quot;result&quot;, &quot;comparison&quot;.
+          </li>
+          <li>
+            <strong>Internal links:</strong> Links to /casebook and /about for
+            crawlability and topical relevance.
+          </li>
+          <li>
+            <strong>Structured data:</strong> WebPage JSON-LD with
+            keyword-rich name and description.
+          </li>
+        </SeoChangeLog>
       </Container>
     </>
   );
 }
+

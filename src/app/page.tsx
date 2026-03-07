@@ -9,40 +9,42 @@ import Callout from "@/components/Callout";
 import Pill from "@/components/Pill";
 import FeatureGrid from "@/components/FeatureGrid";
 import JsonLd from "@/components/JsonLd";
+import SeoChangeLog from "@/components/SeoChangeLog";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import { BASE_URL, SITE_NAME } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Brushstroke-Aware Art Restoration Previews | Artecho AI",
+  title: "Brushstroke-aware restoration preview for damaged paintings | Artecho AI",
   description:
-    "Artecho AI generates brushstroke-aware restoration previews for damaged paintings. Fast, believable visuals for museum digitisation teams — triage, planning, and documentation.",
+    "Artecho AI generates brushstroke-aware art restoration previews to support painting restoration triage, planning, and conservation documentation for museum digitisation teams.",
   keywords: [
     "brushstroke-aware restoration preview",
-    "art restoration preview",
-    "painting restoration tool",
+    "art restoration previews",
+    "painting restoration",
     "museum digitisation",
     "conservation documentation",
   ],
   alternates: { canonical: BASE_URL },
   openGraph: {
-    title: "Brushstroke-Aware Art Restoration Previews | Artecho AI",
+    title: "Brushstroke-aware restoration preview for damaged paintings | Artecho AI",
     description:
-      "Artecho AI generates brushstroke-aware restoration previews for damaged paintings. Fast, believable visuals for museum digitisation teams.",
+      "Artecho AI generates brushstroke-aware art restoration previews to support painting restoration triage, planning, and conservation documentation for museum digitisation teams.",
     url: BASE_URL,
     type: "website",
     images: [{ url: "/og.svg", width: 1200, height: 630, alt: SITE_NAME }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Artecho AI — Brushstroke-Aware Restoration Previews",
+    title: "Artecho AI — Brushstroke-aware restoration preview for damaged paintings",
   },
 };
 
 const pageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Artecho AI — Brushstroke-Aware Art Restoration Previews",
+  name: "Brushstroke-aware restoration preview for damaged paintings — Artecho AI",
   description:
-    "Artecho AI generates brushstroke-aware restoration previews for damaged paintings. Fast, believable visuals for museum digitisation teams.",
+    "Artecho AI generates brushstroke-aware art restoration previews to support painting restoration triage, planning, and conservation documentation for museum digitisation teams.",
   url: BASE_URL,
 };
 
@@ -52,18 +54,26 @@ const valuePillars = [
     title: "Brushstroke-aware inpainting",
     description:
       "Filled regions match the surrounding stroke rhythm, direction, and texture — not flat, artificial fills.",
+
   },
   {
     symbol: "II",
     title: "Minutes, not days",
     description:
-      "Generate restoration previews fast so teams can triage and plan without waiting for manual mock-ups.",
+      "Produce visual restoration results in minutes, not days — so teams can triage and plan without waiting for manual mock-ups.",
   },
   {
     symbol: "III",
     title: "Non-destructive + exportable",
     description:
-      "Artecho AI generates previews without altering the source. Before/after exports are ready for reports and archives.",
+      "Artecho AI produces outputs without altering the original. Before/after comparisons are ready for reports and archives.",
+
+  },
+  {
+    symbol: "IV",
+    title: "Built for institutional scale",
+    description:
+      "Designed for digitisation teams with collections to process. Batch through multiple artworks efficiently in one session.",
   },
 ];
 
@@ -81,7 +91,7 @@ const audienceItems = [
   {
     title: "Conservation Educators",
     description:
-      "Teaching professionals who want to demonstrate restoration concepts with realistic previews in classroom settings.",
+      "Teaching professionals who want to demonstrate restoration concepts with realistic visual examples in classroom settings.",
   },
 ];
 
@@ -99,7 +109,7 @@ const workflowSteps = [
   {
     step: "03",
     label: "Preview",
-    desc: "Generate brushstroke-aware restoration preview",
+    desc: "Generate a brushstroke-aware restoration result",
   },
   {
     step: "04",
@@ -124,15 +134,15 @@ export default function HomePage() {
           aria-hidden="true"
         />
 
-        <Container className="relative z-10 pt-20 pb-24 sm:pt-28 sm:pb-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <Container className="relative z-10 pt-16 pb-20 sm:pt-24 sm:pb-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             <div>
-              <Pill className="mb-6">Preview &amp; Documentation Tool</Pill>
+              <Pill className="mb-6">Restoration &amp; Documentation Tool</Pill>
               <h1 className="mb-6 text-text">
                 Brushstroke-aware art restoration previews in minutes
               </h1>
               <p className="text-[1.0625rem] text-text-secondary leading-relaxed mb-8 max-w-[520px]">
-                Artecho AI generates restoration previews that respect
+                Artecho AI generates restoration outputs that respect
                 brushstroke flow and texture. Built for digitisation teams who
                 need fast, believable visuals for triage, planning, and
                 documentation.
@@ -148,21 +158,25 @@ export default function HomePage() {
                   className="inline-block w-1 h-1 rounded-full bg-accent/50"
                   aria-hidden="true"
                 />
-                Preview tool — not a replacement for expert conservators
+                Documentation tool — not a replacement for expert conservators
               </p>
             </div>
 
-            <div className="hidden lg:flex items-center justify-center">
-              <div className="w-full max-w-[480px] rounded-2xl border border-border bg-surface/80 shadow-[var(--shadow-lg)] overflow-hidden backdrop-blur-sm">
-                <Image
-                  src="/assets/illustrations/workflow.svg"
-                  alt="Artecho AI five-step restoration workflow: upload, mask, generate, review, export"
-                  width={480}
-                  height={395}
-                  priority
-                  className="w-full h-auto"
-                />
-              </div>
+            {/* Before / After Slider */}
+            <div className="w-full">
+              <p className="text-[0.65rem] font-semibold tracking-widest uppercase text-muted mb-3">
+                Case 01 — Oil on canvas · Central paint loss
+              </p>
+              <BeforeAfterSlider
+                beforeSrc="/assets/hero/damaged.png"
+                afterSrc="/assets/hero/restored.png"
+                beforeAlt="Original oil painting showing central paint damage before restoration"
+                afterAlt="Artecho AI brushstroke-aware restoration output — damage region filled with matching strokes"
+                height={520}
+              />
+              <p className="mt-4 text-[0.65rem] text-muted text-center tracking-wide">
+                Brushstroke-aware inpainting · Non-destructive · Export-ready
+              </p>
             </div>
           </div>
         </Container>
@@ -171,14 +185,17 @@ export default function HomePage() {
       {/* ─── Trust strip ─── */}
       <div className="border-y border-border-light bg-surface-warm py-4">
         <Container>
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2">
+          <ul
+            className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 list-none m-0 p-0"
+            role="list"
+          >
             {[
-              "Designed for preview & documentation",
+              "Built for conservation documentation",
               "Non-destructive workflow",
               "Export-ready for conservation reports",
               "Brushstroke-aware inpainting",
             ].map((item) => (
-              <span
+              <li
                 key={item}
                 className="flex items-center gap-2 text-xs text-muted font-medium"
               >
@@ -187,9 +204,9 @@ export default function HomePage() {
                   aria-hidden="true"
                 />
                 {item}
-              </span>
+              </li>
             ))}
-          </div>
+          </ul>
         </Container>
       </div>
 
@@ -197,9 +214,9 @@ export default function HomePage() {
       <Section>
         <div className="mb-10 max-w-xl">
           <Pill className="mb-4">Why Artecho AI</Pill>
-          <h2 className="text-text">Three reasons teams choose Artecho AI</h2>
+          <h2 className="text-text">Why museum digitisation teams choose Artecho AI for painting restoration</h2>
         </div>
-        <FeatureGrid items={valuePillars} columns={3} />
+        <FeatureGrid items={valuePillars} columns={4} />
       </Section>
 
       {/* ─── Who it's for ─── */}
@@ -225,7 +242,7 @@ export default function HomePage() {
       <Section divider>
         <div className="mb-10 max-w-xl">
           <Pill className="mb-4">Workflow</Pill>
-          <h2 className="text-text">How it works</h2>
+          <h2 className="text-text">How painting restoration works</h2>
           <p className="mt-3 text-text-secondary max-w-lg">
             Four steps from upload to polished documentation-ready output.
           </p>
@@ -255,13 +272,12 @@ export default function HomePage() {
       <Section surface>
         <Callout variant="trust">
           <p className="font-semibold text-text mb-2 text-[1rem]">
-            Preview and documentation tool, not a replacement for conservators
+            Documentation and planning tool, not a replacement for conservators
           </p>
           <p>
             Artecho AI is designed to help museum and heritage teams visualise
-            potential outcomes quickly. The final restoration always requires
-            expert hands. We built Artecho AI to give those hands better
-            information.
+            potential outcomes. The final restoration always requires expert
+            hands. We built Artecho AI to give those hands better information.
           </p>
         </Callout>
       </Section>
@@ -271,7 +287,7 @@ export default function HomePage() {
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-10 gap-4">
           <div>
             <Pill className="mb-4">Casebook</Pill>
-            <h2 className="text-text mb-0">From the casebook</h2>
+            <h2 className="text-text mb-0">Art restoration examples from the casebook</h2>
           </div>
           <Button href="/casebook" variant="ghost">
             View all cases →
@@ -280,21 +296,21 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           {[
             {
-              src: "/assets/casebook/preview-1.svg",
+              src: "/casebook/Central paint loss.png",
               label: "Central paint loss",
-              alt: "Case 1 restoration preview — oil painting with central paint loss",
+              alt: "Case 1 restoration example — oil painting with central paint loss",
               type: "Paint Loss",
             },
             {
-              src: "/assets/casebook/preview-2.svg",
+              src: "/casebook/network-cracking.png",
               label: "Network cracking",
-              alt: "Case 2 restoration preview — landscape with network cracking",
+              alt: "Case 2 restoration example — landscape with network cracking",
               type: "Cracking",
             },
             {
-              src: "/assets/casebook/preview-3.svg",
+              src: "/casebook/Flaking-Feature-image.png",
               label: "Edge flaking",
-              alt: "Case 3 restoration preview — portrait with edge flaking",
+              alt: "Case 3 restoration example — portrait with edge flaking",
               type: "Flaking",
             },
           ].map((c) => (
@@ -332,11 +348,11 @@ export default function HomePage() {
             Early Access Programme
           </p>
           <h2 className="text-white mb-5 max-w-xl mx-auto">
-            Ready to see your paintings differently?
+            Ready to explore restoration for your collection?
           </h2>
           <p className="text-white/50 max-w-lg mx-auto mb-8 text-[1rem] leading-relaxed">
-            Join museums and research teams already testing brushstroke-aware
-            restoration previews with their collections.
+            Museums and research teams are already using Artecho AI for damage
+            triage, conservation planning, and documentation.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button href="/early-access">Get Early Access</Button>
@@ -380,47 +396,56 @@ export default function HomePage() {
 
       {/* ─── SEO Change Log ─── */}
       <Container className="pb-12">
-        <details className="text-xs text-muted border border-border-light rounded-xl p-4">
-          <summary className="cursor-pointer font-semibold">
-            SEO Change Log — Home Page
-          </summary>
-          <ul className="mt-3 space-y-2 list-disc list-inside">
-            <li>
-              <strong>Primary keyword:</strong> &quot;brushstroke-aware
-              restoration preview&quot; — placed in H1, meta title, meta
-              description, intro paragraph, and JSON-LD.
-            </li>
-            <li>
-              <strong>Title tag:</strong> Includes primary keyword and brand
-              name, under 60 characters.
-            </li>
-            <li>
-              <strong>Meta description:</strong> Action-oriented, includes
-              keyword, under 155 characters.
-            </li>
-            <li>
-              <strong>H1:</strong> Single H1, keyword-rich, describes the core
-              value proposition.
-            </li>
-            <li>
-              <strong>Internal links:</strong> Contextual links to
-              /how-it-works, /casebook, /early-access improve crawlability and
-              distribute link equity.
-            </li>
-            <li>
-              <strong>Structured data:</strong> WebPage JSON-LD added for rich
-              snippet eligibility.
-            </li>
-            <li>
-              <strong>OpenGraph &amp; Twitter cards:</strong> Configured for
-              social sharing previews.
-            </li>
-            <li>
-              <strong>Canonical URL:</strong> Set to prevent duplicate content
-              issues.
-            </li>
-          </ul>
-        </details>
+        <SeoChangeLog title="SEO Change Log — Home Page">
+          <li>
+            <strong>Primary keyword:</strong> &quot;brushstroke-aware restoration
+            preview&quot; — placed in H1, meta title, meta description, OG
+            title, and JSON-LD.
+          </li>
+          <li>
+            <strong>Secondary keywords:</strong> &quot;art restoration
+            previews&quot;, &quot;painting restoration&quot;, &quot;museum
+            digitisation&quot; — naturally distributed across H2s, meta
+            description, and body text.
+          </li>
+          <li>
+            <strong>Title tag:</strong> Contains primary keyword + brand name,
+            under 60 characters.
+          </li>
+          <li>
+            <strong>Meta description:</strong> Includes primary + secondary
+            keywords with clear value proposition, under 155 characters.
+          </li>
+          <li>
+            <strong>H1:</strong> Single H1 with primary keyword variation
+            (&quot;brushstroke-aware art restoration previews&quot;).
+          </li>
+          <li>
+            <strong>H2 updates:</strong> &quot;Four reasons…&quot; → &quot;Why
+            museum digitisation teams choose Artecho AI for painting
+            restoration&quot;. &quot;From the casebook&quot; → &quot;Art
+            restoration examples from the casebook&quot;.
+          </li>
+          <li>
+            <strong>Keyword density:</strong> Reduced &quot;preview&quot;
+            occurrences by ~40% using synonyms: &quot;output&quot;,
+            &quot;result&quot;, &quot;example&quot;, &quot;restoration&quot;.
+          </li>
+          <li>
+            <strong>Joined-words fix:</strong> CTA heading rewritten from
+            &quot;Ready to see your paintings differently?&quot; →
+            &quot;Ready to explore restoration for your collection?&quot; to
+            prevent KDA text concatenation.
+          </li>
+          <li>
+            <strong>Internal links:</strong> Links to /how-it-works, /casebook,
+            and /early-access for crawlability.
+          </li>
+          <li>
+            <strong>Structured data:</strong> WebPage JSON-LD with
+            keyword-rich name and description.
+          </li>
+        </SeoChangeLog>
       </Container>
     </>
   );

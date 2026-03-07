@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600">
+  <defs>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#f97316" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#0d0d0d" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="600" fill="#0d0d0d"/>
+  <!-- Subtle brush strokes -->
+  <path d="M0 300 Q400 250 800 320 T1600 280" stroke="#1a1a1a" stroke-width="80" fill="none" opacity="0.4"/>
+  <path d="M0 400 Q500 350 1000 420 T1600 380" stroke="#171717" stroke-width="60" fill="none" opacity="0.3"/>
+  <path d="M200 100 Q600 180 1000 120 T1600 160" stroke="#1c1c1c" stroke-width="40" fill="none" opacity="0.25"/>
+  <!-- Warm glow -->
+  <ellipse cx="1200" cy="200" rx="400" ry="250" fill="url(#glow)"/>
+  <!-- Grain overlay -->
+  <rect width="1600" height="600" filter="url(#grain)" opacity="0.04"/>
+</svg>

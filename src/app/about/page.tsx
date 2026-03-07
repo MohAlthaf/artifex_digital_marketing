@@ -3,34 +3,40 @@ import Link from "next/link";
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 import Section from "@/components/Section";
-import Container from "@/components/Container";
 import Pill from "@/components/Pill";
 import FAQ from "@/components/FAQ";
 import JsonLd from "@/components/JsonLd";
+import PageHero from "@/components/PageHero";
 import { BASE_URL, SITE_NAME } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "About Artecho AI — Brushstroke-Aware Restoration Previews",
+  title: "About Artecho AI — Conservation Documentation Tool for Museums",
   description:
-    "Learn about Artecho AI, the brushstroke-aware restoration preview tool for museums, heritage labs, and conservation educators. FAQ and contact information.",
+    "Artecho AI is a conservation documentation tool that generates brushstroke-aware restoration previews for museums, heritage labs, and research teams. Learn about our mission and approach.",
+  keywords: [
+    "Artecho AI",
+    "conservation documentation tool",
+    "research teams",
+    "museum heritage",
+  ],
   alternates: { canonical: `${BASE_URL}/about` },
   openGraph: {
-    title: "About Artecho AI",
+    title: "About Artecho AI — Conservation Documentation Tool",
     description:
-      "Learn about Artecho AI — the brushstroke-aware restoration preview tool for museums and heritage teams.",
+      "Artecho AI is a conservation documentation tool that generates brushstroke-aware restoration outputs for museums and heritage research teams.",
     url: `${BASE_URL}/about`,
     type: "website",
     images: [{ url: "/og.svg", width: 1200, height: 630, alt: SITE_NAME }],
   },
-  twitter: { card: "summary_large_image", title: "About Artecho AI" },
+  twitter: { card: "summary_large_image", title: "About Artecho AI — Conservation Documentation Tool" },
 };
 
 const pageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "About Artecho AI",
+  name: "About Artecho AI — Conservation Documentation Tool for Museums",
   description:
-    "Artecho AI is a brushstroke-aware restoration preview tool for museums and heritage teams.",
+    "Artecho AI is a conservation documentation tool that generates brushstroke-aware restoration outputs for museums, heritage labs, and research teams.",
   url: `${BASE_URL}/about`,
 };
 
@@ -99,36 +105,34 @@ export default function AboutPage() {
       <JsonLd data={faqJsonLd} />
 
       {/* ─── Hero ─── */}
-      <section className="relative overflow-hidden hero-gradient noise-texture">
-        <div
-          className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-accent/5 blur-3xl pointer-events-none"
-          aria-hidden="true"
-        />
-        <Container className="relative z-10 pt-20 pb-20 sm:pt-28 sm:pb-24">
-          <Pill className="mb-5">About</Pill>
-          <h1 className="max-w-xl mb-5">About Artecho AI</h1>
-          <p className="text-[1.0625rem] text-text-secondary leading-relaxed max-w-[520px]">
-            Brushstroke-aware restoration previews for museum digitisation,
-            heritage labs, and conservation educators.
-          </p>
-        </Container>
-      </section>
+      <PageHero
+        title="About Artecho AI"
+        backgroundImage="/images/heroes/about-hero.svg"
+      >
+        <Pill className="mb-5">About</Pill>
+        <h1 className="max-w-xl mb-5">About Artecho AI</h1>
+        <p className="text-[1.0625rem] text-text-secondary leading-relaxed max-w-[520px]">
+          A conservation documentation tool that gives museum digitisation,
+          heritage labs, and conservation educators brushstroke-aware
+          restoration outputs.
+        </p>
+      </PageHero>
 
       {/* ─── About body ─── */}
       <Section>
         <div className="max-w-2xl">
           <p className="text-lg text-text-secondary leading-relaxed mb-5">
-            Artecho AI is a brushstroke-aware restoration preview tool designed
+            Artecho AI is a conservation documentation tool designed
             for museum digitisation teams, heritage laboratories, and
-            conservation educators. It generates believable restoration previews
+            conservation educators. It generates believable restoration outputs
             that respect the stroke rhythm, texture, and style of damaged
-            paintings — helping teams plan, document, and communicate
+            paintings — helping research teams plan, document, and communicate
             conservation needs faster.
           </p>
           <p className="text-base text-text-secondary leading-relaxed">
             Built on research in computational art analysis, Artecho AI bridges
             the gap between damage documentation and conservation planning. It
-            does not replace expert hands — it gives them better tools to see
+            does not replace expert hands — it provides them better tools to see
             ahead.
           </p>
         </div>
@@ -138,17 +142,17 @@ export default function AboutPage() {
       <Section surface divider>
         <div className="mb-8 max-w-xl">
           <Pill className="mb-4">Principles</Pill>
-          <h2 className="text-text">How we approach the work</h2>
+          <h2 className="text-text">How Artecho AI approaches conservation documentation</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {[
             {
-              title: "Preview, not prescription",
-              desc: "Artecho AI generates visual previews to inform decisions — not replace the expert conservator. Every output is clearly labelled as a preview.",
+              title: "Documentation, not prescription",
+              desc: "Artecho AI generates visual outputs to inform decisions — not replace the expert conservator. Every result is clearly labelled as a non-destructive output.",
             },
             {
               title: "Honest about limitations",
-              desc: "Not every damage type produces convincing previews. We communicate quality levels clearly so teams can rely on the outputs they trust.",
+              desc: "Not every damage type produces convincing results. We communicate quality levels clearly so teams can rely on the outputs they trust.",
             },
             {
               title: "Built for institutions",
@@ -165,7 +169,7 @@ export default function AboutPage() {
       {/* ─── FAQ ─── */}
       <Section surface divider>
         <h2 className="mb-8">Frequently Asked Questions</h2>
-        <div className="max-w-2xl">
+        <div className="">
           <FAQ items={faqs} />
         </div>
       </Section>
@@ -173,10 +177,11 @@ export default function AboutPage() {
       {/* ─── CTA ─── */}
       <Section divider>
         <div className="text-center max-w-lg mx-auto">
-          <h2 className="mb-4">Join the pilot programme</h2>
+          <h2 className="mb-4">Join the museum heritage pilot programme</h2>
           <p className="text-text-secondary mb-7">
             Artecho AI is in early access. Join museums and research teams
-            testing brushstroke-aware restoration previews.
+            testing brushstroke-aware restoration outputs for conservation
+            documentation.
           </p>
           <Button href="/early-access">Get Early Access</Button>
         </div>

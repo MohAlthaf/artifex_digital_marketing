@@ -1,5 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#7c3aed"/>
-  <text x="600" y="280" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="white" text-anchor="middle">ARTECHO AI</text>
-  <text x="600" y="360" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.8)" text-anchor="middle">Brushstroke-aware restoration previews</text>
+  <defs>
+    <radialGradient id="glow1" cx="75%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="15%" cy="80%" r="40%">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0d0d0d"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+  <rect x="0" y="0" width="1200" height="4" fill="#f97316"/>
+  <text x="80" y="310" font-family="-apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif" font-size="90" font-weight="700" fill="#f0f0f0" letter-spacing="-3">Artecho AI</text>
+  <text x="82" y="372" font-family="-apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif" font-size="26" font-weight="400" fill="#666666" letter-spacing="-0.5">Brushstroke-aware restoration previews for museums</text>
+  <rect x="82" y="414" width="214" height="38" rx="19" fill="#1a0a00"/>
+  <text x="189" y="438" font-family="-apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif" font-size="13" font-weight="700" fill="#f97316" text-anchor="middle" letter-spacing="3">EARLY ACCESS</text>
+  <rect x="1058" y="130" width="82" height="8" rx="4" fill="#f97316" opacity="0.70"/>
+  <rect x="1058" y="154" width="112" height="8" rx="4" fill="#f97316" opacity="0.35"/>
+  <rect x="1058" y="178" width="62" height="8" rx="4" fill="#f97316" opacity="0.18"/>
+  <text x="82" y="568" font-family="-apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif" font-size="15" font-weight="400" fill="#3a3a3a">artecho-ai.vercel.app</text>
 </svg>

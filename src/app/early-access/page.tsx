@@ -1,22 +1,21 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import Image from "next/image";
-import Button from "@/components/Button";
 import Section from "@/components/Section";
 import Container from "@/components/Container";
 import Card from "@/components/Card";
 import Pill from "@/components/Pill";
 import Callout from "@/components/Callout";
 import JsonLd from "@/components/JsonLd";
+import PageHero from "@/components/PageHero";
 import { FORM_URL, BASE_URL } from "@/lib/constants";
 
 const pageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Get Early Access — Artecho AI",
+  name: "Get Early Access to the Artecho AI Restoration Preview Tool",
   description:
-    "Sign up for Artecho AI early access. Share your email and use case to join the pilot programme for museums and research teams.",
+    "Join the Artecho AI early access pilot for museums and research teams. Try our restoration preview tool for brushstroke-aware conservation documentation.",
   url: `${BASE_URL}/early-access`,
 };
 
@@ -58,54 +57,55 @@ export default function EarlyAccessPage() {
       <JsonLd data={pageJsonLd} />
 
       {/* ─── Google Form Embed — at very top ─── */}
-      <Container className="pt-8">
+      <PageHero
+        title="Get Early Access"
+        backgroundImage="/images/heroes/early-access-hero.svg"
+      >
+        <Pill className="mb-5">Early Access</Pill>
+        <h1 className="max-w-xl mb-6">
+          Get Early Access to the Artecho AI Restoration Preview Tool
+        </h1>
+        <p className="text-lg text-text-secondary leading-relaxed max-w-2xl mb-8">
+          Artecho AI is currently available as an early-access pilot for museums
+          and research teams. Fill in the form below to apply.
+        </p>
+      </PageHero>
+
+      <Container className="pt-8 pb-4">
         <div className="rounded-2xl overflow-hidden border border-border bg-surface shadow-[var(--shadow-card)]">
           <iframe
             src={FORM_URL}
             width="100%"
-            height="600"
+            height="640"
             title="Artecho AI Early Access Sign-Up Form"
-            className="w-full border-0"
+            className="w-full border-0 min-h-[480px] sm:min-h-[640px]"
             loading="lazy"
-          >
-            Loading form…
-          </iframe>
+          />
         </div>
+        <p className="mt-3 text-xs text-muted text-center">
+          Form not loading?{" "}
+          <a
+            href={FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline text-accent hover:text-accent-hover"
+          >
+            Open in Google Forms
+          </a>
+        </p>
       </Container>
 
-      {/* ─── Main content ─── */}
+      {/* ─── Details section ─── */}
       <Section>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-4">
-          <div>
-            <Pill className="mb-5">Early Access</Pill>
-            <h1 className="max-w-xl mb-6">Get Early Access</h1>
-          </div>
-          <div className="hidden lg:flex justify-center">
-            <div className="w-full max-w-[400px] rounded-2xl border border-border bg-surface/80 shadow-[var(--shadow-lg)] overflow-hidden">
-              <Image
-                src="/assets/illustrations/early-access.svg"
-                alt="Artecho AI early access illustration — envelope with wax seal"
-                width={400}
-                height={320}
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-        </div>
-        <p className="text-lg text-text-secondary leading-relaxed max-w-2xl mb-12">
-          Artecho AI is currently available as an early-access pilot for museums
-          and research teams. Share your email and use case, and onboarding
-          details will be sent.
-        </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left — what you get + what we ask */}
           <div className="space-y-10">
             <div>
-              <h2 className="text-xl font-semibold mb-5">What you get</h2>
+              <h2 className="text-xl font-semibold mb-5">What you get as a pilot for museums</h2>
               <ul className="space-y-3">
                 {[
-                  "Access to the Artecho AI preview tool during the pilot period",
+                  "Access to the Artecho AI restoration tool during the pilot period",
                   "Priority onboarding with documentation and support",
                   "Opportunity to provide feedback that shapes the product",
                   "Early adopter pricing when Artecho AI launches publicly",
@@ -127,7 +127,7 @@ export default function EarlyAccessPage() {
                   "Your institutional email address",
                   "A brief description of your use case (e.g., damage documentation, triage)",
                   "Willingness to share anonymised feedback on preview quality",
-                  "Acknowledgement that Artecho AI is a preview tool, not a restoration service",
+                  "Acknowledgement that Artecho AI is a documentation tool, not a restoration service",
                 ].map((item) => (
                   <li
                     key={item}
@@ -146,7 +146,7 @@ export default function EarlyAccessPage() {
               <p className="mb-3">
                 Artecho AI is in early access. The pilot is free during the
                 testing period. You retain full ownership of your images and
-                outputs.
+                results.
               </p>
               <p className="text-xs text-muted">
                 We will only email pilot details and onboarding instructions.

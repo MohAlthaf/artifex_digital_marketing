@@ -1,49 +1,38 @@
 @import "tailwindcss";
 
-/* ─── Design Tokens ─── */
+/* ─── Design Tokens — Black + Orange ─── */
 :root {
-  --bg: #faf7f4;
-  --surface: #ffffff;
-  --surface-warm: #f4efe8;
-  --surface-dark: #1c1814;
+  /* Backgrounds */
+  --bg: #0d0d0d;
+  --surface: #171717;
+  --surface-warm: #1c1c1c;
+  --surface-dark: #070707;
 
-  --text: #1c1814;
-  --text-secondary: #4a4038;
-  --muted: #857568;
+  /* Text */
+  --text: #f0f0f0;
+  --text-secondary: #9a9a9a;
+  --muted: #5c5c5c;
 
-  --border: #ddd5ca;
-  --border-light: #e8e1d8;
+  /* Borders */
+  --border: #282828;
+  --border-light: #1e1e1e;
 
-  --accent: #8b4513;
-  --accent-hover: #6d350f;
-  --accent-light: #f5ebe0;
-  --accent2: #b87040;
+  /* Orange accent */
+  --accent: #f97316;
+  --accent-hover: #ea580c;
+  --accent-light: #1a0a00;
+  --accent2: #fb923c;
 
-  --primary: #8b4513;
+  --primary: #f97316;
   --primary-foreground: #ffffff;
   --accent-foreground: #ffffff;
 
-  --shadow-sm:   0 1px 3px rgba(28, 24, 20, 0.06);
-  --shadow-card: 0 2px 8px rgba(28, 24, 20, 0.07), 0 1px 3px rgba(28, 24, 20, 0.04);
-  --shadow-md:   0 4px 14px rgba(28, 24, 20, 0.09), 0 2px 4px rgba(28, 24, 20, 0.04);
-  --shadow-lg:   0 8px 28px rgba(28, 24, 20, 0.11), 0 3px 8px rgba(28, 24, 20, 0.05);
-  --shadow-lift: 0 14px 40px rgba(28, 24, 20, 0.13), 0 4px 12px rgba(28, 24, 20, 0.07);
-}
-
-.dark {
-  --bg: #140f0b;
-  --surface: #1e1810;
-  --surface-warm: #251e16;
-  --surface-dark: #0c0905;
-  --text: #f0e9e0;
-  --text-secondary: #b5a898;
-  --muted: #7a6e63;
-  --border: #2e2620;
-  --border-light: #26201a;
-  --accent: #c07848;
-  --accent-hover: #d48850;
-  --accent-light: #2a180a;
-  --accent2: #8b4513;
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.55), 0 2px 6px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 36px rgba(0, 0, 0, 0.6), 0 3px 10px rgba(0, 0, 0, 0.35);
+  --shadow-lift: 0 16px 52px rgba(0, 0, 0, 0.65), 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 @theme inline {
@@ -79,7 +68,10 @@ body {
 }
 
 /* ─── Typography scale ─── */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--text);
@@ -108,12 +100,12 @@ p {
   color: var(--text-secondary);
 }
 
-/* ─── Hero gradient ─── */
+/* ─── Hero gradient — dark with orange warmth ─── */
 .hero-gradient {
   background:
-    radial-gradient(ellipse 90% 70% at 75% 35%, rgba(139, 69, 19, 0.07) 0%, transparent 65%),
-    radial-gradient(ellipse 65% 55% at 15% 80%, rgba(184, 112, 64, 0.05) 0%, transparent 55%),
-    linear-gradient(160deg, var(--bg) 0%, #f7f0e8 100%);
+    radial-gradient(ellipse 80% 60% at 80% 30%, rgba(249, 115, 22, 0.13) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 45% at 10% 85%, rgba(249, 115, 22, 0.07) 0%, transparent 55%),
+    linear-gradient(175deg, var(--bg) 0%, #0b0500 100%);
 }
 
 /* ─── Noise texture (CSS-only, no external libs) ─── */
@@ -141,19 +133,85 @@ p {
 }
 
 /* ─── Transitions ─── */
-a, button {
+a,
+button {
   transition: color 0.15s ease, background-color 0.15s ease,
     box-shadow 0.2s ease, border-color 0.15s ease, transform 0.15s ease;
 }
 
 /* ─── Selection ─── */
 ::selection {
-  background: var(--accent-light);
-  color: var(--text);
+  background: rgba(249, 115, 22, 0.3);
+  color: #f0f0f0;
 }
 
 /* ─── Scrollbar ─── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+/* ─── Body scroll lock (mobile nav) ─── */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* ─── Page hero background ─── */
+.page-hero-bg {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+      rgba(13, 13, 13, 0.82) 0%,
+      rgba(13, 13, 13, 0.92) 60%,
+      var(--bg) 100%);
+  z-index: 0;
+}
+
+.page-hero-bg>* {
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Before/After slider ─── */
+.slider-handle {
+  touch-action: none;
+}
+
+input[type="range"].slider-range {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: col-resize;
+}
+
+input[type="range"].slider-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+}
+
+input[type="range"].slider-range::-moz-range-thumb {
+  width: 0;
+  height: 0;
+  border: none;
+}

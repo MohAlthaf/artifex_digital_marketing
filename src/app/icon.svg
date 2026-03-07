@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="8" fill="#0d0d0d"/>
+  <!-- Orange "A" lettermark -->
+  <text x="16" y="23" font-family="-apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif"
+    font-size="20" font-weight="700" fill="#f97316" text-anchor="middle" letter-spacing="-1">A</text>
+  <!-- Small orange dot accent -->
+  <circle cx="24" cy="9" r="3" fill="#f97316"/>
+</svg>
