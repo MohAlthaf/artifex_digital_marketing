@@ -9,8 +9,6 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import AnalyticsPageViews from "@/components/analytics-pageviews";
 import { Suspense } from "react";
 
-
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
