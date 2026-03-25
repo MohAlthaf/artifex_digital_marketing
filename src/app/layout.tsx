@@ -6,8 +6,6 @@ import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import { BASE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/constants";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import AnalyticsPageViews from "@/components/analytics-pageviews";
-import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -70,20 +68,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:rounded-xl focus:bg-accent focus:text-white focus:text-sm focus:font-semibold"
+        >
+          Skip to main content
+        </a>
         <JsonLd data={organizationJsonLd} />
         <JsonLd data={websiteJsonLd} />
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
-        {/* Loads GA4 gtag.js */}
         {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
-
-        {/* Tracks route changes (important for Next.js navigation) */}
-        {gaId ? (
-          <Suspense fallback={null}>
-            <AnalyticsPageViews gaId={gaId} />
-          </Suspense>
-        ) : null}
       </body>
     </html>
   );

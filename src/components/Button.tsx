@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 interface ButtonProps {
@@ -6,6 +8,7 @@ interface ButtonProps {
   children: React.ReactNode;
   className?: string;
   size?: "sm" | "md" | "lg";
+  onClick?: () => void;
 }
 
 export default function Button({
@@ -14,6 +17,7 @@ export default function Button({
   children,
   className = "",
   size = "md",
+  onClick,
 }: ButtonProps) {
   const sizes = {
     sm: "px-5 py-2 text-sm",
@@ -45,7 +49,11 @@ export default function Button({
   };
 
   return (
-    <Link href={href} className={`${base} ${variants[variant]} ${className}`}>
+    <Link
+      href={href}
+      onClick={onClick}
+      className={`${base} ${variants[variant]} ${className}`}
+    >
       {children}
     </Link>
   );

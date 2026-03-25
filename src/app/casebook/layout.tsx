@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { BASE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Art Restoration Preview Casebook — Before and After Examples | Artecho AI",
+  title:
+    "Art Restoration Preview Casebook — Before and After Examples | Artecho AI",
   description:
     "Browse the Artecho AI art restoration preview casebook — before and after examples of damaged artworks including paint loss, cracking, and flaking, restored with brushstroke-aware inpainting.",
   keywords: [
@@ -18,9 +19,11 @@ export const metadata: Metadata = {
       "Before and after restoration examples for damaged artworks — paint loss, cracking, and flaking cases handled with brushstroke-aware inpainting.",
     url: `${BASE_URL}/casebook`,
     type: "website",
-    images: [{ url: "/og.svg", width: 1200, height: 630, alt: "Artecho AI" }],
   },
-  twitter: { card: "summary_large_image", title: "Art Restoration Preview Casebook | Artecho AI" },
+  twitter: {
+    card: "summary_large_image",
+    title: "Art Restoration Preview Casebook | Artecho AI",
+  },
 };
 
 export default function CasebookLayout({

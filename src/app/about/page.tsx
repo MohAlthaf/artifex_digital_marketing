@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Button from "@/components/Button";
+import CtaButton from "@/components/CtaButton";
 import Card from "@/components/Card";
 import Section from "@/components/Section";
 import Pill from "@/components/Pill";
@@ -26,9 +27,11 @@ export const metadata: Metadata = {
       "Artecho AI is a conservation documentation tool that generates brushstroke-aware restoration outputs for museums and heritage research teams.",
     url: `${BASE_URL}/about`,
     type: "website",
-    images: [{ url: "/og.svg", width: 1200, height: 630, alt: SITE_NAME }],
   },
-  twitter: { card: "summary_large_image", title: "About Artecho AI — Conservation Documentation Tool" },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Artecho AI — Conservation Documentation Tool",
+  },
 };
 
 const pageJsonLd = {
@@ -122,12 +125,12 @@ export default function AboutPage() {
       <Section>
         <div className="max-w-2xl">
           <p className="text-lg text-text-secondary leading-relaxed mb-5">
-            Artecho AI is a conservation documentation tool designed
-            for museum digitisation teams, heritage laboratories, and
-            conservation educators. It generates believable restoration outputs
-            that respect the stroke rhythm, texture, and style of damaged
-            paintings — helping research teams plan, document, and communicate
-            conservation needs faster.
+            Artecho AI is a conservation documentation tool designed for museum
+            digitisation teams, heritage laboratories, and conservation
+            educators. It generates believable restoration outputs that respect
+            the stroke rhythm, texture, and style of damaged paintings — helping
+            research teams plan, document, and communicate conservation needs
+            faster.
           </p>
           <p className="text-base text-text-secondary leading-relaxed">
             Built on research in computational art analysis, Artecho AI bridges
@@ -142,7 +145,9 @@ export default function AboutPage() {
       <Section surface divider>
         <div className="mb-8 max-w-xl">
           <Pill className="mb-4">Principles</Pill>
-          <h2 className="text-text">How Artecho AI approaches conservation documentation</h2>
+          <h2 className="text-text">
+            How Artecho AI approaches conservation documentation
+          </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {[
@@ -183,7 +188,13 @@ export default function AboutPage() {
             testing brushstroke-aware restoration outputs for conservation
             documentation.
           </p>
-          <Button href="/early-access">Get Early Access</Button>
+          <CtaButton
+            href="/early-access"
+            buttonText="Get Early Access"
+            ctaPosition="about_cta"
+          >
+            Get Early Access
+          </CtaButton>
         </div>
       </Section>
 

@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { NAV_LINKS, SITE_NAME } from "@/lib/constants";
+import { trackCtaClick, trackOutboundClick } from "@/lib/analytics";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -19,6 +22,7 @@ export default function Footer() {
             </p>
             <Link
               href="/early-access"
+              onClick={() => trackCtaClick("Get Early Access", "footer")}
               className="inline-flex items-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-accent text-white hover:bg-accent-hover transition-colors shadow-[var(--shadow-sm)]"
             >
               Get Early Access
@@ -55,6 +59,9 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:hello@artecho-ai.com"
+                  onClick={() =>
+                    trackOutboundClick("hello@artecho-ai.com", "mailto")
+                  }
                   className="text-sm text-white/45 hover:text-white/80 transition-colors duration-150"
                 >
                   hello@artecho-ai.com
@@ -63,6 +70,9 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:research@artecho-ai.com"
+                  onClick={() =>
+                    trackOutboundClick("research@artecho-ai.com", "mailto")
+                  }
                   className="text-sm text-white/45 hover:text-white/80 transition-colors duration-150"
                 >
                   research@artecho-ai.com

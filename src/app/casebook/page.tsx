@@ -4,12 +4,12 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/Button";
+import CtaButton from "@/components/CtaButton";
 import Section from "@/components/Section";
 import Container from "@/components/Container";
 import Pill from "@/components/Pill";
 import Callout from "@/components/Callout";
 import JsonLd from "@/components/JsonLd";
-import SeoChangeLog from "@/components/SeoChangeLog";
 import PageHero from "@/components/PageHero";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import { BASE_URL } from "@/lib/constants";
@@ -113,10 +113,12 @@ export default function CasebookPage() {
             <button
               key={f.value}
               onClick={() => setActiveFilter(f.value)}
-              className={`px-4 py-2 rounded-xl text-sm font-medium transition-colors duration-150 ${activeFilter === f.value
-                ? "bg-accent text-white"
-                : "bg-surface border border-border text-muted hover:text-text hover:border-accent/40"
-                }`}
+              aria-pressed={activeFilter === f.value}
+              className={`px-4 py-2 rounded-xl text-sm font-medium transition-colors duration-150 ${
+                activeFilter === f.value
+                  ? "bg-accent text-white"
+                  : "bg-surface border border-border text-muted hover:text-text hover:border-accent/40"
+              }`}
             >
               {f.label}
             </button>
@@ -179,12 +181,20 @@ export default function CasebookPage() {
       {/* ─── CTA ─── */}
       <Section surface divider>
         <div className="text-center max-w-lg mx-auto">
-          <h2 className="mb-4">See restoration examples with your own damaged artworks</h2>
+          <h2 className="mb-4">
+            See restoration examples with your own damaged artworks
+          </h2>
           <p className="text-text-secondary mb-7">
             Join the early-access pilot to test Artecho AI with your own artwork
             images and generate results for your collection.
           </p>
-          <Button href="/early-access">Get Early Access</Button>
+          <CtaButton
+            href="/early-access"
+            buttonText="Get Early Access"
+            ctaPosition="casebook_cta"
+          >
+            Get Early Access
+          </CtaButton>
         </div>
       </Section>
 
@@ -208,34 +218,6 @@ export default function CasebookPage() {
           to get started.
         </p>
       </Section>
-
-      {/* ─── SEO Change Log ─── */}
-      <Container className="pb-12">
-        <SeoChangeLog title="SEO Change Log — Casebook Page">
-          <li>
-            <strong>Primary keyword:</strong> &quot;art restoration preview
-            casebook&quot; — placed in H1, meta title, meta description, OG
-            title, and JSON-LD.
-          </li>
-          <li>
-            <strong>Secondary keywords:</strong> &quot;before and after
-            restoration&quot;, &quot;damaged artworks&quot;, &quot;restoration
-            examples&quot; — placed in H1, H2, description, and body copy.
-          </li>
-          <li>
-            <strong>Keyword density:</strong> Reduced &quot;preview&quot;
-            occurrences using synonyms: &quot;output&quot;, &quot;result&quot;,
-            &quot;example&quot;.
-          </li>
-          <li>
-            <strong>H1:</strong> Updated to include primary keyword variation.
-          </li>
-          <li>
-            <strong>H2:</strong> Updated CTA heading to include
-            &quot;damaged artworks&quot; secondary keyword.
-          </li>
-        </SeoChangeLog>
-      </Container>
     </>
   );
 }

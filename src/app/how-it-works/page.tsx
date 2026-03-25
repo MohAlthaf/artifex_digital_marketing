@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/Button";
+import CtaButton from "@/components/CtaButton";
 import Card from "@/components/Card";
 import Section from "@/components/Section";
 import Container from "@/components/Container";
 import Pill from "@/components/Pill";
 import JsonLd from "@/components/JsonLd";
-import SeoChangeLog from "@/components/SeoChangeLog";
 import PageHero from "@/components/PageHero";
 import { BASE_URL, SITE_NAME } from "@/lib/constants";
 
@@ -28,7 +28,6 @@ export const metadata: Metadata = {
       "Five-step digital painting restoration workflow with brushstroke-aware inpainting. Upload, mask, generate, review, and export restoration previews for documentation.",
     url: `${BASE_URL}/how-it-works`,
     type: "website",
-    images: [{ url: "/og.svg", width: 1200, height: 630, alt: SITE_NAME }],
   },
   twitter: {
     card: "summary_large_image",
@@ -97,7 +96,9 @@ export default function HowItWorksPage() {
 
       {/* ─── Workflow block — image + steps ─── */}
       <Section surface divider>
-        <h2 className="mb-10">Five-step brushstroke-aware inpainting workflow</h2>
+        <h2 className="mb-10">
+          Five-step brushstroke-aware inpainting workflow
+        </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
           {/* Steps */}
           <ol className="space-y-6">
@@ -137,7 +138,10 @@ export default function HowItWorksPage() {
 
       {/* ─── What makes it different ─── */}
       <Section divider>
-        <h2 className="mb-10">What makes Artecho AI different for restoration previews and documentation</h2>
+        <h2 className="mb-10">
+          What makes Artecho AI different for restoration previews and
+          documentation
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           <Card title="Brushstroke flow consistency">
             <p>
@@ -167,12 +171,20 @@ export default function HowItWorksPage() {
       {/* ─── CTA ─── */}
       <Section surface>
         <div className="text-center max-w-lg mx-auto">
-          <h2 className="mb-4">Try the restoration workflow with your own artworks</h2>
+          <h2 className="mb-4">
+            Try the restoration workflow with your own artworks
+          </h2>
           <p className="text-text-secondary mb-7">
             Join the early-access pilot to test Artecho AI with your own artwork
             images.
           </p>
-          <Button href="/early-access">Get Early Access</Button>
+          <CtaButton
+            href="/early-access"
+            buttonText="Get Early Access"
+            ctaPosition="how_it_works_cta"
+          >
+            Get Early Access
+          </CtaButton>
         </div>
       </Section>
 
@@ -196,49 +208,6 @@ export default function HowItWorksPage() {
           .
         </p>
       </Section>
-
-      {/* ─── SEO Change Log ─── */}
-      <Container className="pb-12">
-        <SeoChangeLog title="SEO Change Log — How It Works Page">
-          <li>
-            <strong>Primary keyword:</strong> &quot;digital painting
-            restoration workflow&quot; — placed in H1, meta title, meta
-            description, intro paragraph, and JSON-LD.
-          </li>
-          <li>
-            <strong>Title tag:</strong> Updated to include brand name, under
-            60 characters.
-          </li>
-          <li>
-            <strong>Meta description:</strong> Updated to include
-            &quot;restoration previews for documentation&quot; secondary
-            keyword.
-          </li>
-          <li>
-            <strong>H1:</strong> Single H1 with primary keyword and audience
-            qualifier (&quot;museum digitisation&quot;).
-          </li>
-          <li>
-            <strong>H2 updates:</strong> &quot;Five-step workflow&quot;
-            updated to &quot;Five-step brushstroke-aware inpainting
-            workflow&quot;. Added secondary keywords to other H2 headings.
-          </li>
-          <li>
-            <strong>Keyword density:</strong> Reduced &quot;preview&quot;
-            occurrences using synonyms: &quot;output&quot;,
-            &quot;result&quot;, &quot;comparison&quot;.
-          </li>
-          <li>
-            <strong>Internal links:</strong> Links to /casebook and /about for
-            crawlability and topical relevance.
-          </li>
-          <li>
-            <strong>Structured data:</strong> WebPage JSON-LD with
-            keyword-rich name and description.
-          </li>
-        </SeoChangeLog>
-      </Container>
     </>
   );
 }
-

@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   alternates: { canonical: `${BASE_URL}/early-access` },
   openGraph: {
     title: "Get Early Access to the Restoration Preview Tool | Artecho AI",
-    description: "Join the Artecho AI early access pilot for museums and research teams. Try our restoration preview tool.",
+    description:
+      "Join the Artecho AI early access pilot for museums and research teams. Try our restoration preview tool.",
     type: "website",
-    images: [{ url: "/og.svg", width: 1200, height: 630, alt: "Artecho AI" }],
   },
   twitter: {
     card: "summary_large_image",
