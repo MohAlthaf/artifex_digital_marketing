@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: BASE_URL,
     siteName: SITE_NAME,
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Artecho AI preview",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
